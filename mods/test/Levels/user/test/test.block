@@ -65,10 +65,10 @@
       Item = Int|timer_hero_level_EASY||600
       Item = Int|current_hero_level_cap||0
       Item = Int|timer_initialize_wave||5
-      Item = Int|timer_waves_next||300
-      Item = Float|timer_waves||240
-      Item = Float|timer_waves_NORMAL||240
-      Item = Float|timer_waves_EASY||300
+      Item = Int|timer_waves_next||0
+      Item = Float|timer_waves||0
+      Item = Float|timer_waves_NORMAL||0
+      Item = Float|timer_waves_EASY||0
       Item = Float|timer_max_walk||60
       Item = Float|count_current_waves||4
       Item = Float|count_current_waves_NORMAL||3
@@ -88,7 +88,7 @@
       Item = Int|spawner_destroyed_overall_mg||3
       Item = Int|spawner_destroyed_overall_lg||7
       Item = EntityList|waves_spawner||
-      Item = Bool|first_wave||False
+      Item = Bool|first_wave||True
       Item = EntityList|spawners||
       Item = Int|waves_spawn_simultaneous||1
       Item = Int|counter_current_waves||0
