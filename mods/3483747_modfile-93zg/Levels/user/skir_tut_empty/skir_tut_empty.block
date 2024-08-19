@@ -1,71 +1,222 @@
-﻿s_create
+﻿s_my_award
+  Include = empty_script
+  ScriptContainer
+    Triggers
+      Item = OnceAfter
+    Actions
+      Item = AwardAchievementAction
+        Achievement = ach_main04undead_sacrifice
+s_my_create
   Include = empty_script
   ScriptContainer
     Actions
       Item = SpawnTemplateFromList
-        Amount = Int|||0
-        Owner = AIPlayer5
-        Location = Entity||entrances/entrance|
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = unit_priestess
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = unit_priestess_gold
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = unit_vampire_queen
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = hero_priestess_common
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = hero_priestess_elite
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
         Templates
           Item = hero_priestess_gold
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = plot_protagonist_evil
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = unit_pitfiend
+      Item = Comment
+        IsCommentedOut = True
+        Comment = ""
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = AIPlayer5
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = hero_priestess_common
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = AIPlayer5
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = hero_priestess_elite
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = AIPlayer5
+        Location = Entity||waypoints/waypoint1|
+        Templates
           Item = hero_priestess_gold
-          Item = hero_priestess_gold
-          Item = hero_priestess_gold
-        SpawnedEntitiesVariable = EntityList||all_spawner|
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = AIPlayer5
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = plot_protagonist_evil
+    Triggers
+      Item = OnceAfter
   ScriptVariableContainer
     Variables
-      Item = EntityList|||
+      Item = Int|v_cnt||10
+s_my_money
+  Include = empty_script
+  ScriptContainer
+    Triggers
+      Item = OnceAfter
+    Actions
+      Item = GiveCurrency
+        Currency = BatteryManager
+        Amount = Int|||10000
+        Position = Entity||room_throneroom|
+        FallbackStoreAnywhere = True
+      Item = GiveCurrency
+        Currency = BeerManager
+        Amount = Int|||10000
+        FallbackStoreAnywhere = True
+        Position = Entity||room_throneroom|
+      Item = GiveCurrency
+        Currency = EvilnessManager
+        Amount = Int|||10000
+        FallbackStoreAnywhere = True
+        Position = Entity||room_throneroom|
+      Item = GiveCurrency
+        Currency = FaithManager
+        Amount = Int|||10000
+        FallbackStoreAnywhere = True
+        Position = Entity||room_throneroom|
+      Item = GiveCurrency
+        Currency = GoldManager
+        Amount = Int|||1000000
+        FallbackStoreAnywhere = True
+        Position = Entity||room_throneroom|
+      Item = GiveCurrency
+        Currency = GuruManager
+        Amount = Int|||10000
+        FallbackStoreAnywhere = True
+        Position = Entity||room_throneroom|
+      Item = GiveCurrency
+        Currency = ManaManager
+        Amount = Int|||10000
+        FallbackStoreAnywhere = True
+        Position = Entity||room_throneroom|
+      Item = GiveCurrency
+        Currency = PotionManager
+        Amount = Int|||10000
+        FallbackStoreAnywhere = True
+        Position = Entity||room_throneroom|
+      Item = GiveCurrency
+        Currency = ToolboxManager
+        Amount = Int|||10000
+        FallbackStoreAnywhere = True
+        Position = Entity||room_throneroom|
+s_my_spawn
+  Include = empty_script
+  ScriptContainer
+    Triggers
+      Item = PeriodicTrigger
+        Duration = Float||v_every|60
+    AfterPlay = Nothing
+    Actions
+      Item = SpawnIfUnrestrictedFromList
+        Spawners = EntityList||my_spawner|
+        SpawnedSelectionGroup = EntityList||v_spawn|
+      Item = GetFirstEntityInListAction
+        List = EntityList||v_spawn|
+        Variable = Entity||v_spawn_f|
+      Item = PingMiniMap
+        Location = Entity||v_spawn_f|
+        PingUnitRaid = False
+        UseOwnerFromScriptLocation = False
+        Permanent = False
+        ThrowCameraEvent = True
+        IsCommentedOut = True
+      Item = UncoverFogOfWar
+        Location = Entity||v_spawn_f|
+        Radius = 15
+        FowVariable = Entity||v_spawn_f|
+  ScriptVariableContainer
+    Variables
+      Item = EntityList|v_spawn||
+      Item = Int|v_every||30
+      Item = Entity|v_spawn_f||
+s_my_spawn_hero_priestess
+  Include = empty_script
+  ScriptContainer
+    Actions
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = AIPlayer5
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = hero_priestess_gold
+        SpawnedEntitiesVariable = EntityList||v_created|
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = AIPlayer5
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = hero_priestess_elite
+        SpawnedEntitiesVariable = EntityList||v_created|
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|0
+        Owner = AIPlayer5
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = hero_priestess_common
+        SpawnedEntitiesVariable = EntityList||v_created|
+      Item = GiveOrderToSelectionGroup
+        SelectionGroup = EntityList||v_created|
+        Order = MoveAttackOrder
+          Target = Entity||room_throneroom|
+      Item = ForEach
+        Items = EntityList||v_created|
+        Actions
+          Item = SetUnitHealth
+            Unit = Entity||v_ent|
+            Value = Float|||0.01
+        LoopVariable = Entity||v_ent|
+    Triggers
+      Item = PeriodicTrigger
+        Duration = Float||v_every|60
+    AfterPlay = Nothing
+  ScriptVariableContainer
+    Variables
+      Item = Int|v_cnt||5
+      Item = Int|v_every||30
+      Item = Entity|v_ent||
       Item = EntityList|v_created||
-s_spawn
-  Include = empty_script
-  ScriptContainer
-    Triggers
-      Item = PeriodicTrigger
-        Duration = Float|||60
-    AfterPlay = Nothing
-    Actions
-      Item = SpawnIfUnrestrictedFromList
-        Spawners = EntityList||my_spawner|
-script_skir_hero_spawner_manager 2
-  Include = empty_script
-  ScriptVariableContainer
-    Variables
-      Item = Int|timer_hero_spawn||60
-      Item = EntityList|all_spawner
-      Item = EntityTemplate|t_hero_priestess_gold||
-      Item = Int|num_attackers||5
-      Item = Entity|hero_priestess_gold||
-  ScriptContainer
-    AfterPlay = Nothing
-    Triggers
-      Item = PeriodicTrigger
-        Duration = Float||timer_hero_spawn|0
-    Actions
-      Item = FillList
-        List = EntityList||all_spawner|
-        Owner = AIPlayer5
-        Filter
-          Item = EntityListFilterAlive
-          Item = EntityListFilterInRegion
-            Outside = True
-          Item = EntityListFilterEntityType
-            EntityType = type_spawner
-        IsCommentedOut = True
-      Item = SpawnTemplate
-        Template = hero_priestess_gold
-        Owner = AIPlayer5
-        Location = Entity||entrances/entrance_outside|
-        SpawnedEntityVariable = Entity||hero_priestess_gold|
-        IsCommentedOut = True
-      Item = AddEntityToList
-        Entity = Entity||hero_priestess_gold|
-        EntityList = EntityList||all_spawner|
-        IsCommentedOut = True
-      Item = SpawnIfUnrestrictedFromList
-        Spawners = EntityList||my_spawner|
-        UseFirstUnrestrictedSpawner = False
-        IsCommentedOut = True
-    Enabled = False
 world_skir_tut_empty
   Include = world
   SceneDescription
