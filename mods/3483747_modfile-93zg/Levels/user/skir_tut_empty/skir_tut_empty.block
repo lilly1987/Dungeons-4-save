@@ -1,9 +1,235 @@
-﻿s_my_award
+﻿hero_priestess_common2
+  Include = hero_priestess_common
+  EntityType
+    Types = Append
+      Item = type_spawner_pri
+  EvilHandInteractable
+    IsMassSlappable = True
+  EvilHandPickup
+    MayUsePortals = True
+    CanBeDismissed = True
+    CanBeSacrificed = True
+    OnlyPickableWhenDefeated = False
+hero_priestess_elite2
+  Include = hero_priestess_elite
+  EntityType
+    Types = Append
+      Item = type_spawner_pri
+  EvilHandInteractable
+    IsMassSlappable = True
+  EvilHandPickup
+    MayUsePortals = True
+    CanBeDismissed = True
+    CanBeSacrificed = True
+    OnlyPickableWhenOwned = False
+    OnlyPickableWhenDefeated = False
+hero_priestess_gold2
+  Include = hero_priestess_gold
+  EntityType
+    Types = Append
+      Item = type_spawner_pri
+  EvilHandInteractable
+    IsMassSlappable = True
+  EvilHandPickup
+    OnlyPickableWhenDefeated = False
+    CanBeSacrificed = True
+    CanBeDismissed = True
+    MayUsePortals = True
+player_playable_my
+  Include = player_playable
+  ResearchManager
+    StartResearches
+      Item = res_arcanium.stage_1
+      Item = res_arcanium.stage_2
+      Item = res_arcanium.stage_3
+      Item = res_arcanium.stage_4
+      Item = res_brewery.stage_1
+      Item = res_brewery.stage_2
+      Item = res_brewery.stage_3
+      Item = res_crypt.stage_1
+      Item = res_crypt.stage_2
+      Item = res_crypt.stage_3
+      Item = res_crypt.stage_4
+      Item = res_crypt.stage_5
+      Item = res_demons.stage_1
+      Item = res_demons.stage_10
+      Item = res_demons.stage_2
+      Item = res_demons.stage_3
+      Item = res_demons.stage_4
+      Item = res_demons.stage_5
+      Item = res_demons.stage_6
+      Item = res_demons.stage_7
+      Item = res_demons.stage_8
+      Item = res_demons.stage_9
+      Item = res_necrodancicon.stage_1
+      Item = res_necrodancicon.stage_2
+      Item = res_necrodancicon.stage_3
+      Item = res_necrodancicon.stage_4
+      Item = res_doors.stage_1
+      Item = res_doors.stage_2
+      Item = res_doors.stage_3
+      Item = res_doors.stage_4
+      Item = res_dungeon.stage_1
+      Item = res_dungeon.stage_10
+      Item = res_dungeon.stage_2
+      Item = res_dungeon.stage_3
+      Item = res_dungeon.stage_4
+      Item = res_dungeon.stage_5
+      Item = res_dungeon.stage_6
+      Item = res_dungeon.stage_7
+      Item = res_dungeon.stage_8
+      Item = res_dungeon.stage_9
+      Item = res_evilvault.stage_1
+      Item = res_evilvault.stage_2
+      Item = res_evilvault.stage_3
+      Item = res_gazer.stage_1
+      Item = res_gazer.stage_2
+      Item = res_gazer.stage_3
+      Item = res_gazer.stage_4
+      Item = res_gnome.stage_1
+      Item = res_gnome.stage_2
+      Item = res_gnome.stage_3
+      Item = res_gnome.stage_4
+      Item = res_gnome.stage_5
+      Item = res_graveyard.stage_1
+      Item = res_graveyard.stage_2
+      Item = res_graveyard.stage_3
+      Item = res_graveyard.stage_4
+      Item = res_graveyard.stage_5
+      Item = res_guardroom.stage_1
+      Item = res_guardroom.stage_2
+      Item = res_guardroom.stage_3
+      Item = res_guardroom.stage_4
+      Item = res_gurufarm.stage_1
+      Item = res_gurufarm.stage_2
+      Item = res_gurufarm.stage_3
+      Item = res_gurufarm.stage_4
+      Item = res_gurufarm.stage_5
+      Item = res_hideout.stage_1
+      Item = res_hideout.stage_2
+      Item = res_hideout.stage_3
+      Item = res_hideout.stage_4
+      Item = res_hideout.stage_5
+      Item = res_hideout.stage_6
+      Item = res_horde.stage_1
+      Item = res_horde.stage_10
+      Item = res_horde.stage_2
+      Item = res_horde.stage_3
+      Item = res_horde.stage_4
+      Item = res_horde.stage_5
+      Item = res_horde.stage_6
+      Item = res_horde.stage_7
+      Item = res_horde.stage_8
+      Item = res_horde.stage_9
+      Item = res_necromancer.stage_1
+      Item = res_necromancer.stage_2
+      Item = res_necromancer.stage_3
+      Item = res_necromancer.stage_4
+      Item = res_necromancer.stage_5
+      Item = res_potionlodge.stage_1
+      Item = res_potionlodge.stage_2
+      Item = res_potionlodge.stage_3
+      Item = res_potionlodge.stage_4
+      Item = res_potionlodge.stage_5
+      Item = res_potions_complex.stage_1
+      Item = res_potions_complex.stage_2
+      Item = res_potions_complex.stage_3
+      Item = res_potions_simple.stage_1
+      Item = res_potions_simple.stage_2
+      Item = res_potions_simple.stage_3
+      Item = res_powerchamber.stage_1
+      Item = res_powerchamber.stage_2
+      Item = res_powerchamber.stage_3
+      Item = res_prison.stage_1
+      Item = res_prison.stage_2
+      Item = res_prison.stage_3
+      Item = res_prison.stage_4
+      Item = res_prison.stage_5
+      Item = res_relaxchamber.stage_1
+      Item = res_relaxchamber.stage_2
+      Item = res_relaxchamber.stage_3
+      Item = res_relaxchamber.stage_4
+      Item = res_skeletonlord.stage_1
+      Item = res_skeletonlord.stage_2
+      Item = res_skeletonlord.stage_3
+      Item = res_skeletonlord.stage_4
+      Item = res_skeletonlord.stage_5
+      Item = res_spells_charge.stage_1
+      Item = res_spells_charge.stage_2
+      Item = res_spells_charge.stage_3
+      Item = res_spells_simple.stage_1
+      Item = res_spells_simple.stage_2
+      Item = res_spells_simple.stage_3
+      Item = res_succubus.stage_1
+      Item = res_succubus.stage_2
+      Item = res_succubus.stage_3
+      Item = res_succubus.stage_4
+      Item = res_succubus.stage_5
+      Item = res_succubus.stage_6
+      Item = res_temple.stage_1
+      Item = res_temple.stage_2
+      Item = res_temple.stage_3
+      Item = res_temple.stage_4
+      Item = res_temple.stage_5
+      Item = res_temple.stage_6
+      Item = res_throneroom.stage_1
+      Item = res_throneroom.stage_2
+      Item = res_throneroom.stage_3
+      Item = res_throneroom.stage_4
+      Item = res_throneroom.stage_5
+      Item = res_throneroom.stage_6
+      Item = res_torturechamber.stage_1
+      Item = res_torturechamber.stage_2
+      Item = res_torturechamber.stage_3
+      Item = res_torturechamber.stage_4
+      Item = res_torturechamber.stage_5
+      Item = res_trap_ground.stage_1
+      Item = res_trap_ground.stage_2
+      Item = res_trap_ground.stage_3
+      Item = res_trap_simple.stage_1
+      Item = res_trap_simple.stage_2
+      Item = res_trap_simple.stage_3
+      Item = res_trap_trigger.stage_1
+      Item = res_trap_trigger.stage_2
+      Item = res_trap_trigger.stage_3
+      Item = res_treasury.stage_1
+      Item = res_treasury.stage_2
+      Item = res_treasury.stage_3
+      Item = res_treasury.stage_4
+      Item = res_treasury.stage_5
+      Item = res_undead.stage_1
+      Item = res_undead.stage_10
+      Item = res_undead.stage_2
+      Item = res_undead.stage_3
+      Item = res_undead.stage_4
+      Item = res_undead.stage_5
+      Item = res_undead.stage_6
+      Item = res_undead.stage_7
+      Item = res_undead.stage_8
+      Item = res_undead.stage_9
+      Item = res_vampire.stage_1
+      Item = res_vampire.stage_2
+      Item = res_vampire.stage_3
+      Item = res_vampire.stage_4
+      Item = res_vampire.stage_5
+      Item = res_workshop.stage_1
+      Item = res_workshop.stage_2
+      Item = res_workshop.stage_3
+      Item = res_workshop.stage_4
+      Item = res_workshop.stage_5
+      Item = res_workshop.stage_6
+      Item = res_snot.stage_1
+      Item = res_snot.stage_2
+      Item = res_snot.stage_3
+      Item = res_snot.stage_4
+      Item = res_snot.stage_5
+      Item = res_snot.stage_6
+s_my_award
   Include = empty_script
   ScriptContainer
     Triggers
       Item = OnceAfter
-        StartDelay = Float|||1
+        StartDelay = Float|||10
     Actions
       Item = AwardAchievementAction
         Achievement = ach_main04undead_sacrifice
@@ -17,48 +243,64 @@ s_my_create
         Location = Entity||waypoints/waypoint1|
         Templates
           Item = unit_priestess
+      Item = Wait
+        Duration = Float||v_t|1
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
         Location = Entity||waypoints/waypoint1|
         Templates
           Item = unit_priestess_gold
+      Item = Wait
+        Duration = Float||v_t|1
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
         Location = Entity||waypoints/waypoint1|
         Templates
           Item = unit_vampire_queen
+      Item = Wait
+        Duration = Float||v_t|1
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
         Location = Entity||waypoints/waypoint1|
         Templates
           Item = hero_priestess_common
+      Item = Wait
+        Duration = Float||v_t|1
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
         Location = Entity||waypoints/waypoint1|
         Templates
           Item = hero_priestess_elite
+      Item = Wait
+        Duration = Float||v_t|1
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
         Location = Entity||waypoints/waypoint1|
         Templates
           Item = hero_priestess_gold
+      Item = Wait
+        Duration = Float||v_t|1
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
         Location = Entity||waypoints/waypoint1|
         Templates
           Item = plot_protagonist_evil
+      Item = Wait
+        Duration = Float||v_t|1
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
         Location = Entity||waypoints/waypoint1|
         Templates
           Item = unit_pitfiend
+      Item = Wait
+        Duration = Float||v_t|1
       Item = Comment
         IsCommentedOut = True
         Comment = ""
@@ -88,10 +330,11 @@ s_my_create
           Item = plot_protagonist_evil
     Triggers
       Item = OnceAfter
-        StartDelay = Float|||2
+        StartDelay = Float|||5
   ScriptVariableContainer
     Variables
-      Item = Int|v_cnt||10
+      Item = Int|v_cnt||5
+      Item = Float|v_t||0.0625
 s_my_money
   Include = empty_script
   ScriptContainer
@@ -100,7 +343,7 @@ s_my_money
         StartDelay = Float|||1
     Actions
       Item = ForLoopAction
-        LoopCounts = Int|||200
+        LoopCounts = Int|||50
         Actions
           Item = GiveCurrency
             Currency = GoldManager
@@ -112,7 +355,7 @@ s_my_money
       Item = Wait
         Duration = Float||v_t|1
       Item = ForLoopAction
-        LoopCounts = Int|||105
+        LoopCounts = Int|||100
         Actions
           Item = GiveCurrency
             Currency = EvilnessManager
@@ -127,8 +370,10 @@ s_my_money
             Currency = EvilnessManager
             Amount = Int|||20
             Position = Entity||rooms/room_evilvault74|
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||v_t|1
+        IsCommentedOut = True
       Item = ForLoopAction
         LoopCounts = Int|||74
         Actions
@@ -136,8 +381,10 @@ s_my_money
             Currency = EvilnessManager
             Amount = Int|||20
             Position = Entity||rooms/room_evilvault74_1|
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||v_t|1
+        IsCommentedOut = True
       Item = ForLoopAction
         LoopCounts = Int|||41
         Actions
@@ -145,6 +392,7 @@ s_my_money
             Currency = EvilnessManager
             Amount = Int|||20
             Position = Entity||rooms/room_evilvault41|
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||v_t|1
       Item = GiveCurrency
@@ -194,27 +442,76 @@ s_my_money
         Duration = Float||v_t|1
   ScriptVariableContainer
     Variables
-      Item = Float|v_t||0.0125
+      Item = Float|v_t||0.0625
 s_my_spawn
   Include = empty_script
   ScriptContainer
     Triggers
       Item = PeriodicTrigger
         Duration = Float||v_every|60
+      Item = OnceAfter
+        StartDelay = Float|||0
     AfterPlay = Nothing
     Actions
+      Item = FillList
+        List = EntityList||v_spawn|
+        Owner = AIPlayer5
+        Filter
+          Item = EntityListFilterAlive
+          Item = EntityListFilterInRegion
+            Outside = True
+          Item = EntityListFilterEntityType
+            EntityType = type_spawner_pri
       Item = SpawnIfUnrestrictedFromList
         Spawners = EntityList||my_spawner|
         SpawnedSelectionGroup = EntityList||v_spawn|
+      Item = Comment
+        IsCommentedOut = True
+        Comment = ""
       Item = GetFirstEntityInListAction
         List = EntityList||v_spawn|
         Variable = Entity||v_spawn_f|
-      Item = PingMiniMap
+      Item = UncoverFogOfWar
         Location = Entity||v_spawn_f|
-        PingUnitRaid = False
-        UseOwnerFromScriptLocation = False
-        Permanent = False
-        ThrowCameraEvent = True
+        Radius = 15
+        FowVariable = Entity||v_spawn_f|
+  ScriptVariableContainer
+    Variables
+      Item = Int|v_every||60
+      Item = EntityList|v_spawn||
+      Item = Entity|v_spawn_f||
+s_my_spawn 2
+  Include = empty_script
+  ScriptContainer
+    AfterPlay = Nothing
+    Triggers
+      Item = PeriodicTrigger
+        Duration = Float||v_every|60
+      Item = OnceAfter
+    Actions
+      Item = SpawnTemplate
+        Template = hero_priestess_common
+        Owner = AIPlayer5
+        SpawnedEntityVariable = Entity||v_spawn_f|
+      Item = AddEntityToList
+        Entity = Entity||v_spawn_f|
+        EntityList = EntityList||v_spawn|
+        IsCommentedOut = True
+      Item = AddRaidToSelectionGroup
+        Raid = Entity||v_spawn_f|
+        SelectionGroup = EntityList||my_spawner|
+      Item = SpawnNow
+        Spawner = Entity||v_spawn_f|
+        SpawnedSelectionGroup = EntityList||my_spawner|
+      Item = SpawnIfUnrestrictedFromList
+        Spawners = EntityList||my_spawner|
+        SpawnedSelectionGroup = EntityList||v_spawn|
+        IsCommentedOut = True
+      Item = Comment
+        IsCommentedOut = True
+      Item = GetFirstEntityInListAction
+        List = EntityList||v_spawn|
+        Variable = Entity||v_spawn_f|
         IsCommentedOut = True
       Item = UncoverFogOfWar
         Location = Entity||v_spawn_f|
@@ -271,6 +568,8 @@ s_my_spawn_hero_priestess
       Item = Int|v_every||60
       Item = Entity|v_ent||
       Item = EntityList|v_created||
+type_spawner_pri
+  Include = type_base
 world_skir_tut_empty
   Include = world
   SceneDescription
@@ -294,7 +593,7 @@ world_skir_tut_empty
     OwnerSetup
       Item
         Owner = SinglePlayer
-        PlayerTemplate = player_playable
+        PlayerTemplate = player_playable_my
         Alliance = None
       Item
         Owner = AIPlayer5
