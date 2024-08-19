@@ -1,0 +1,51 @@
+﻿world_test
+  Include = world
+  SceneDescription
+    TechLevel = autoDigEntranceThroneroomEntryTiles
+    Regions
+      Item
+        Position = 100 100
+        Size = 250 250
+        Owner = SinglePlayer
+        Template = InsideRegion
+        LightTheme = 
+        VegetationTheme = 
+        TexturesGuid = 
+      Item
+        Position = 1100 100
+        Size = 250 250
+        Owner = Invalid
+        Template = OutsideRegion
+        LightTheme = 
+        VegetationTheme = 
+        TexturesGuid = 
+    OwnerSetup
+      Item
+        Owner = SinglePlayer
+        PlayerTemplate = player_playable
+        Alliance = None
+      Item
+        Owner = AIPlayer5
+        PlayerTemplate = player_npc
+        Alliance = None
+      Item
+        Owner = AICreepScorpling11
+        PlayerTemplate = player_npc
+        Alliance = None
+      Item
+        Owner = AICreepLavaling12
+        PlayerTemplate = player_npc
+        Alliance = None
+      Item
+        Owner = AiCreepManaling13
+        PlayerTemplate = player_npc
+        Alliance = None
+      Item
+        Owner = AiCreepSpiderling14
+        PlayerTemplate = player_npc
+        Alliance = None
+      Item
+        Owner = AIAngryMonster15
+        PlayerTemplate = player_npc
+        Alliance = None
+    MapTitle = test

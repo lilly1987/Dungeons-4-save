@@ -35,6 +35,17 @@ hero_priestess_gold2
     CanBeSacrificed = True
     CanBeDismissed = True
     MayUsePortals = True
+hero_priestess_gold3
+  Include = hero_priestess_gold
+  UiDataUnit
+    Portrait = 0fbbb0152f8f5104e95309059811e2f9
+    Icon = 76b51c498687aff4b9e2252d76eb3668
+    Title = plot_protagonist_evil_capt
+    Flavour = plot_protagonist_evil_flav
+    OverheadOffset = 2
+    OverheadPingOffset = 2
+  VisualRepresentation
+    VisualTemplateOverride = plot_protagonist_evil
 player_playable_my
   Include = player_playable
   ResearchManager
@@ -304,37 +315,61 @@ s_my_create
       Item = Comment
         IsCommentedOut = True
         Comment = ""
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = AIPlayer5
-        Location = Entity||waypoints/waypoint1|
-        Templates
-          Item = hero_priestess_common
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = AIPlayer5
-        Location = Entity||waypoints/waypoint1|
-        Templates
-          Item = hero_priestess_elite
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = AIPlayer5
-        Location = Entity||waypoints/waypoint1|
-        Templates
-          Item = hero_priestess_gold
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = AIPlayer5
-        Location = Entity||waypoints/waypoint1|
-        Templates
-          Item = plot_protagonist_evil
+      Item = ForLoopAction
+        Actions
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint1|
+            Templates
+              Item = hero_priestess_gold3
+            SpawnedEntitiesVariable = EntityList||tmp|
+          Item = Wait
+            Duration = Float||v_t|1
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint1|
+            Templates
+              Item = hero_priestess_common2
+            SpawnedEntitiesVariable = EntityList||tmp|
+          Item = Wait
+            Duration = Float||v_t|1
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint1|
+            Templates
+              Item = hero_priestess_elite
+            SpawnedEntitiesVariable = EntityList||tmp|
+          Item = Wait
+            Duration = Float||v_t|1
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint1|
+            Templates
+              Item = hero_priestess_gold2
+            SpawnedEntitiesVariable = EntityList||tmp|
+          Item = Wait
+            Duration = Float||v_t|1
+        LoopCounts = Int|||5
+      Item = ForEach
+        LoopVariable = Entity||v_ent|
+        Items = EntityList||tmp|
+        Actions
+          Item = SetUnitHealth
+            Unit = Entity||v_ent|
+            Value = Float|||0.01
     Triggers
       Item = OnceAfter
-        StartDelay = Float|||5
+        StartDelay = Float|||3
   ScriptVariableContainer
     Variables
       Item = Int|v_cnt||5
-      Item = Float|v_t||0.0625
+      Item = Float|v_t||0.125
+      Item = EntityList|tmp||
+      Item = Entity|v_ent||
 s_my_evil
   Include = empty_script
   ScriptContainer
@@ -343,9 +378,11 @@ s_my_evil
         StartDelay = Float|||5
     Actions
       Item = UncoverFogOfWar
-        Location = Entity||spawners/spawner_eddyn_patrol|
+        Location = Entity||spawners/spawner_eddyn_patrol_sandbox_my|
         Radius = 32
-        FowVariable = Entity||spawners/spawner_eddyn_patrol|
+      Item = UncoverFogOfWar
+        Location = Entity||spawners/spawner_eddyn_patrol_sandbox|
+        Radius = 32
       Item = EnableEvilDeedManager
       Item = SetEvilDeedManagerInterval
         Interval = Int||v_in|0
@@ -376,7 +413,7 @@ s_my_money
       Item = Wait
         Duration = Float||v_t|1
       Item = ForLoopAction
-        LoopCounts = Int|||100
+        LoopCounts = Int|||50
         Actions
           Item = GiveCurrency
             Currency = EvilnessManager
@@ -385,35 +422,12 @@ s_my_money
       Item = Wait
         Duration = Float||v_t|1
       Item = ForLoopAction
-        LoopCounts = Int|||74
-        Actions
-          Item = GiveCurrency
-            Currency = EvilnessManager
-            Amount = Int|||20
-            Position = Entity||rooms/room_evilvault74|
-        IsCommentedOut = True
-      Item = Wait
-        Duration = Float||v_t|1
-        IsCommentedOut = True
-      Item = ForLoopAction
-        LoopCounts = Int|||74
-        Actions
-          Item = GiveCurrency
-            Currency = EvilnessManager
-            Amount = Int|||20
-            Position = Entity||rooms/room_evilvault74_1|
-        IsCommentedOut = True
-      Item = Wait
-        Duration = Float||v_t|1
-        IsCommentedOut = True
-      Item = ForLoopAction
-        LoopCounts = Int|||41
+        LoopCounts = Int|||50
         Actions
           Item = GiveCurrency
             Currency = EvilnessManager
             Amount = Int|||20
             Position = Entity||rooms/room_evilvault41|
-        IsCommentedOut = True
       Item = Wait
         Duration = Float||v_t|1
       Item = GiveCurrency
@@ -573,7 +587,7 @@ s_my_spawn_hero_priestess
         Owner = AIPlayer5
         Location = Entity||waypoints/waypoint1|
         Templates
-          Item = hero_priestess_common
+          Item = hero_priestess_common2
         SpawnedEntitiesVariable = EntityList||v_created|
       Item = GiveOrderToSelectionGroup
         SelectionGroup = EntityList||v_created|
@@ -596,6 +610,8 @@ s_my_spawn_hero_priestess
       Item = Int|v_every||60
       Item = Entity|v_ent||
       Item = EntityList|v_created||
+spawner_eddyn_patrol_sandbox_my
+  Include = spawner_eddyn_patrol_sandbox
 type_spawner_pri
   Include = type_base
 world_skir_tut_empty
@@ -604,7 +620,7 @@ world_skir_tut_empty
     Regions
       Item
         Position = 100 100
-        Size = 100 100
+        Size = 250 250
         Owner = SinglePlayer
         Template = InsideRegion
         LightTheme = 
