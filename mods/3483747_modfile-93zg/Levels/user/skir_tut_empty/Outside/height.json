@@ -1,0 +1,48 @@
+﻿{
+    "vertices": [
+        {
+            "x": 3300.0,
+            "y": 600.0
+        },
+        {
+            "x": 3300.0,
+            "y": 300.0
+        },
+        {
+            "x": 3600.0,
+            "y": 300.0
+        },
+        {
+            "x": 3600.0,
+            "y": 600.0
+        }
+    ],
+    "polygons": [
+        {
+            "vertices": [
+                0,
+                1,
+                2,
+                3
+            ]
+        }
+    ],
+    "heights": [
+        0
+    ],
+    "cliffTypes": [
+        0
+    ],
+    "cliffTypesGood": [
+        0
+    ],
+    "cliffTypesEvil": [
+        0
+    ],
+    "cliffHeightDelta": [
+        0
+    ],
+    "placeStairs": [
+        true
+    ]
+}

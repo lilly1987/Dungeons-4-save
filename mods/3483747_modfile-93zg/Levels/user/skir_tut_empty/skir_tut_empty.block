@@ -1,0 +1,115 @@
+﻿script_skir_hero_spawner_manager 2
+  Include = empty_script
+  ScriptVariableContainer
+    Variables
+      Item = Int|timer_hero_spawn||1
+      Item = EntityList|all_spawner
+      Item = EntityTemplate|t_hero_priestess_gold||
+      Item = Int|num_attackers||5
+      Item = Entity|hero_priestess_gold||
+  ScriptContainer
+    AfterPlay = Nothing
+    Triggers
+      Item = PeriodicTrigger
+        Duration = Float||timer_hero_spawn|0
+    Actions
+      Item = FillList
+        List = EntityList||all_spawner|
+        Owner = AIPlayer5
+        Filter
+          Item = EntityListFilterAlive
+          Item = EntityListFilterInRegion
+            Outside = True
+          Item = EntityListFilterEntityType
+            EntityType = type_spawner
+        IsCommentedOut = True
+      Item = SpawnTemplateFromList
+        Amount = Int||num_attackers|8
+        Owner = AIPlayer5
+        Location = Entity||entrances/entrance|
+        Templates
+          Item = hero_priestess_gold
+          Item = hero_priestess_gold
+          Item = hero_priestess_gold
+          Item = hero_priestess_gold
+        SpawnedEntitiesVariable = EntityList||all_spawner|
+      Item = SpawnTemplate
+        Template = hero_priestess_gold
+        Owner = AIPlayer5
+        Location = Entity||entrances/entrance_outside|
+        SpawnedEntityVariable = Entity||hero_priestess_gold|
+      Item = AddEntityToList
+        Entity = Entity||hero_priestess_gold|
+        EntityList = EntityList||all_spawner|
+      Item = SpawnIfUnrestrictedFromList
+        Spawners = EntityList||all_spawner|
+world_skir_tut_empty
+  Include = world
+  SceneDescription
+    Regions
+      Item
+        Position = 100 100
+        Size = 100 100
+        Owner = SinglePlayer
+        Template = InsideRegion
+        LightTheme = 
+        VegetationTheme = 
+        TexturesGuid = 
+      Item
+        Position = 1100 100
+        Size = 100 100
+        Owner = Invalid
+        Template = OutsideRegion
+        LightTheme = 
+        VegetationTheme = 
+        TexturesGuid = 
+    OwnerSetup
+      Item
+        Owner = SinglePlayer
+        PlayerTemplate = player_playable
+        Alliance = None
+      Item
+        Owner = AIPlayer5
+        PlayerTemplate = player_npc
+        Alliance = None
+      Item
+        Owner = AICreepLavaling12
+        PlayerTemplate = player_npc
+        Alliance = None
+      Item
+        Owner = AiCreepManaling13
+        PlayerTemplate = player_npc
+        Alliance = None
+      Item
+        Owner = AiCreepSpiderling14
+        PlayerTemplate = player_npc
+        Alliance = None
+      Item
+        Owner = AIAngryMonster15
+        PlayerTemplate = player_npc
+        Alliance = None
+    NewPerks
+      Item = evilperk_thalya_canonier
+      Item = evilperk_thalya_damage
+      Item = evilperk_thalya_glass_canon
+      Item = evilperk_thalya_health
+      Item = evilperk_thalya_skill_cost
+      Item = evilperk_thalya_xp
+      Item = evilperk_skill_callback
+      Item = evilperk_skill_gorgu
+      Item = evilperk_skill_storm
+      Item = evilperk_skill_tentacle
+      Item = evilperk_heroes
+      Item = evilperk_speed
+      Item = evilperk_undead_graveyard
+      Item = evilperk_undead_minions
+      Item = evilperk_undead_research
+      Item = evilperk_undead_turned_hero
+    GameSettings
+      Item = gs_common_difficulty
+      Item = gs_common_startresources
+      Item = gs_common_secretrooms
+      Item = gs_common_researchrandom
+      Item = gs_skir03wave_wave_cooldown
+      Item = gs_skir03wave_wave_length
+    PreviewImage = 65fcbea0ba77e604c8caa5eece5ff0c6
