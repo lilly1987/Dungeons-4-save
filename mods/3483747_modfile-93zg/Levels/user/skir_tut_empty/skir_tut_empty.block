@@ -100,7 +100,7 @@ s_my_money
         StartDelay = Float|||1
     Actions
       Item = ForLoopAction
-        LoopCounts = Int|||20
+        LoopCounts = Int|||200
         Actions
           Item = GiveCurrency
             Currency = GoldManager
@@ -108,6 +108,9 @@ s_my_money
             Position = Entity||rooms/room_treasury1|
           Item = Wait
             Duration = Float||v_t|1
+            IsCommentedOut = True
+      Item = Wait
+        Duration = Float||v_t|1
       Item = ForLoopAction
         LoopCounts = Int|||105
         Actions
@@ -191,7 +194,7 @@ s_my_money
         Duration = Float||v_t|1
   ScriptVariableContainer
     Variables
-      Item = Float|v_t||0.025
+      Item = Float|v_t||0.0125
 s_my_spawn
   Include = empty_script
   ScriptContainer
@@ -337,4 +340,6 @@ world_skir_tut_empty
       Item = gs_common_researchrandom
       Item = gs_skir03wave_wave_cooldown
       Item = gs_skir03wave_wave_length
-    PreviewImage = 65fcbea0ba77e604c8caa5eece5ff0c6
+    PreviewImage = ac17eb7ab7555cb4e948504c021a06f1
+    MapTitle = dlg_skir03wave_mission_capt
+    MapDescription = dlg_skir03wave_mission_desc
