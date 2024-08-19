@@ -413,8 +413,8 @@
 /scripts/script_skir_hero_level_manager,script_skir_hero_level_manager,1333f61c78a82dc4,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
 /scripts/s_my_award,s_my_award,68982e227d77be85,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
 /scripts/s_my_create,s_my_create,5c3d6f4a2f92390f,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
+/scripts/s_my_evil,s_my_evil,451840905b1e0cd0,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
 /scripts/s_my_money,s_my_money,1db09e7172139c1d,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
-/scripts/s_my_spawn 2,s_my_spawn 2,238ea1c10e604dd6,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
 /scripts/s_my_spawn,s_my_spawn,33c4c1225553ba9f,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
 /scripts/s_my_spawn_hero_priestess,s_my_spawn_hero_priestess,3556c52b010a3c08,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
 /spawners/spawner_camp,spawner_camp,1cc9e974786f3052,3363.808,0,457.192,0,220,0,0,0,0,OutbuildingBuilder.MatchDistance=35;list=my_spawner
@@ -441,6 +441,7 @@
 /spawners/spawner_edboss_crystalgolem_hero_level,spawner_edboss_crystalgolem_hero_level,2f1c50a61599273a,3409.684,0,540.106,0,180,0,0,0,0,
 /spawners/spawner_edboss_hypnofrog_hero_level,spawner_edboss_hypnofrog_hero_level,35f138f267240382,3525.756,0,428.167,0,180,0,0,0,0,
 /spawners/spawner_edboss_unicorn_hero_level,spawner_edboss_unicorn_hero_level,3438cd550a76316e,3527.98,0,372.493,0,180,0,0,0,0,MakeExceptIfHeroLevel.Minimum=1
+/spawners/spawner_eddyn_patrol,spawner_eddyn_patrol,43a7d2e853245448,3546.448,0,354.855,0,180,0,0,0,0,accessibleByScript;EvilDeedDynamicReachPosition.Target=EntityList||waypoints/waypoint_end|
 /spawners/spawner_vil,spawner_vil,789705350526e24a,3538.682,0,517.64,0,220,0,0,0,0,OutbuildingBuilder.MatchDistance=35;list=my_spawner
 /tower_vill_hero_crossbow,tower_vill_hero_crossbow,4026ee61ecb4328,3526.144,0,503.838,0,220,0,0,0,0,
 /tower_vill_hero_crossbow,tower_vill_hero_crossbow,7dd925055188c1df,3503.07,0,522.6,0,220,0,0,0,0,
@@ -527,3 +528,4 @@
 /trap_trigger_slimeball,trap_trigger_slimeball,b7c70dd1a6e8122,429,0,313.5,0,270,0,0,0,0,owner=SinglePlayer
 /type_spawner_pri,type_spawner_pri,3c7b75053e71b4fd,0,0,0,0,0,0,0,0,0,
 /waypoints/waypoint1,waypoint,68af646b0c789267,431.997,0,449.241,0,180,0,0,0,0,accessibleByScript;list=e_waypoint
+/waypoints/waypoint_end,waypoint,353e0b53648ab2ef,3345.696,0,351.662,0,180,0,0,0,0,accessibleByScript
