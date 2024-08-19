@@ -97,68 +97,101 @@ s_my_money
   ScriptContainer
     Triggers
       Item = OnceAfter
-        StartDelay = Float|||3
+        StartDelay = Float|||1
     Actions
       Item = ForLoopAction
-        LoopCounts = Int|||10
+        LoopCounts = Int|||20
         Actions
           Item = GiveCurrency
             Currency = GoldManager
             Amount = Int|||1000
             Position = Entity||rooms/room_treasury1|
           Item = Wait
-            Duration = Float|||1
+            Duration = Float||v_t|1
+      Item = ForLoopAction
+        LoopCounts = Int|||105
+        Actions
+          Item = GiveCurrency
+            Currency = EvilnessManager
+            Amount = Int|||20
+            Position = Entity||rooms/room_evilvault105|
+      Item = Wait
+        Duration = Float||v_t|1
+      Item = ForLoopAction
+        LoopCounts = Int|||74
+        Actions
+          Item = GiveCurrency
+            Currency = EvilnessManager
+            Amount = Int|||20
+            Position = Entity||rooms/room_evilvault74|
+      Item = Wait
+        Duration = Float||v_t|1
+      Item = ForLoopAction
+        LoopCounts = Int|||74
+        Actions
+          Item = GiveCurrency
+            Currency = EvilnessManager
+            Amount = Int|||20
+            Position = Entity||rooms/room_evilvault74_1|
+      Item = Wait
+        Duration = Float||v_t|1
+      Item = ForLoopAction
+        LoopCounts = Int|||41
+        Actions
+          Item = GiveCurrency
+            Currency = EvilnessManager
+            Amount = Int|||20
+            Position = Entity||rooms/room_evilvault41|
+      Item = Wait
+        Duration = Float||v_t|1
       Item = GiveCurrency
         Currency = ToolboxManager
         Amount = Int|||100
         FallbackStoreAnywhere = False
         Position = Entity||rooms/room_workshop|
       Item = Wait
-        Duration = Float|||1
-      Item = GiveCurrency
-        Currency = EvilnessManager
-        Amount = Int|||1000
-        Position = Entity||rooms/room_evilvault|
-      Item = Wait
-        Duration = Float|||1
-      Item = GiveCurrency
-        Currency = BeerManager
-        Amount = Int|||100
-        Position = Entity||room_throneroom|
-      Item = Wait
-        Duration = Float|||1
+        Duration = Float||v_t|1
       Item = GiveCurrency
         Currency = BatteryManager
         Amount = Int|||100
-        Position = Entity||room_throneroom|
+        Position = Entity||rooms/room_workshop|
       Item = Wait
-        Duration = Float|||1
+        Duration = Float||v_t|1
+      Item = GiveCurrency
+        Currency = BeerManager
+        Amount = Int|||100
+        Position = Entity||rooms/room_brewery|
+      Item = Wait
+        Duration = Float||v_t|1
       Item = GiveCurrency
         Currency = FaithManager
         Amount = Int|||100
         Position = Entity||room_throneroom|
       Item = Wait
-        Duration = Float|||1
+        Duration = Float||v_t|1
       Item = GiveCurrency
         Currency = GuruManager
         Amount = Int|||100
-        Position = Entity||room_throneroom|
+        Position = Entity||rooms/room_gurufarm|
       Item = Wait
-        Duration = Float|||1
+        Duration = Float||v_t|1
       Item = GiveCurrency
         Currency = PotionManager
         Amount = Int|||100
         FallbackStoreAnywhere = False
-        Position = Entity||room_throneroom|
+        Position = Entity||rooms/room_potionlodge|
       Item = Wait
-        Duration = Float|||1
+        Duration = Float||v_t|1
       Item = GiveCurrency
         Currency = ManaManager
         Amount = Int|||1000
         Position = Entity||rooms/room_arcanium|
         FallbackStoreAnywhere = False
       Item = Wait
-        Duration = Float|||1
+        Duration = Float||v_t|1
+  ScriptVariableContainer
+    Variables
+      Item = Float|v_t||0.025
 s_my_spawn
   Include = empty_script
   ScriptContainer
@@ -186,8 +219,8 @@ s_my_spawn
         FowVariable = Entity||v_spawn_f|
   ScriptVariableContainer
     Variables
+      Item = Int|v_every||60
       Item = EntityList|v_spawn||
-      Item = Int|v_every||30
       Item = Entity|v_spawn_f||
 s_my_spawn_hero_priestess
   Include = empty_script
@@ -232,7 +265,7 @@ s_my_spawn_hero_priestess
   ScriptVariableContainer
     Variables
       Item = Int|v_cnt||5
-      Item = Int|v_every||30
+      Item = Int|v_every||60
       Item = Entity|v_ent||
       Item = EntityList|v_created||
 world_skir_tut_empty
