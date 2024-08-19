@@ -1,8 +1,36 @@
-﻿script_skir_hero_spawner_manager 2
+﻿s_create
+  Include = empty_script
+  ScriptContainer
+    Actions
+      Item = SpawnTemplateFromList
+        Amount = Int|||0
+        Owner = AIPlayer5
+        Location = Entity||entrances/entrance|
+        Templates
+          Item = hero_priestess_gold
+          Item = hero_priestess_gold
+          Item = hero_priestess_gold
+          Item = hero_priestess_gold
+        SpawnedEntitiesVariable = EntityList||all_spawner|
+  ScriptVariableContainer
+    Variables
+      Item = EntityList|||
+      Item = EntityList|v_created||
+s_spawn
+  Include = empty_script
+  ScriptContainer
+    Triggers
+      Item = PeriodicTrigger
+        Duration = Float|||60
+    AfterPlay = Nothing
+    Actions
+      Item = SpawnIfUnrestrictedFromList
+        Spawners = EntityList||my_spawner|
+script_skir_hero_spawner_manager 2
   Include = empty_script
   ScriptVariableContainer
     Variables
-      Item = Int|timer_hero_spawn||1
+      Item = Int|timer_hero_spawn||60
       Item = EntityList|all_spawner
       Item = EntityTemplate|t_hero_priestess_gold||
       Item = Int|num_attackers||5
@@ -23,26 +51,21 @@
           Item = EntityListFilterEntityType
             EntityType = type_spawner
         IsCommentedOut = True
-      Item = SpawnTemplateFromList
-        Amount = Int||num_attackers|8
-        Owner = AIPlayer5
-        Location = Entity||entrances/entrance|
-        Templates
-          Item = hero_priestess_gold
-          Item = hero_priestess_gold
-          Item = hero_priestess_gold
-          Item = hero_priestess_gold
-        SpawnedEntitiesVariable = EntityList||all_spawner|
       Item = SpawnTemplate
         Template = hero_priestess_gold
         Owner = AIPlayer5
         Location = Entity||entrances/entrance_outside|
         SpawnedEntityVariable = Entity||hero_priestess_gold|
+        IsCommentedOut = True
       Item = AddEntityToList
         Entity = Entity||hero_priestess_gold|
         EntityList = EntityList||all_spawner|
+        IsCommentedOut = True
       Item = SpawnIfUnrestrictedFromList
-        Spawners = EntityList||all_spawner|
+        Spawners = EntityList||my_spawner|
+        UseFirstUnrestrictedSpawner = False
+        IsCommentedOut = True
+    Enabled = False
 world_skir_tut_empty
   Include = world
   SceneDescription
