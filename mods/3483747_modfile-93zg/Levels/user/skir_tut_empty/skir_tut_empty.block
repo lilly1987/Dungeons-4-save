@@ -3,6 +3,7 @@
   ScriptContainer
     Triggers
       Item = OnceAfter
+        StartDelay = Float|||1
     Actions
       Item = AwardAchievementAction
         Achievement = ach_main04undead_sacrifice
@@ -87,6 +88,7 @@ s_my_create
           Item = plot_protagonist_evil
     Triggers
       Item = OnceAfter
+        StartDelay = Float|||2
   ScriptVariableContainer
     Variables
       Item = Int|v_cnt||10
@@ -95,52 +97,68 @@ s_my_money
   ScriptContainer
     Triggers
       Item = OnceAfter
+        StartDelay = Float|||3
     Actions
-      Item = GiveCurrency
-        Currency = BatteryManager
-        Amount = Int|||10000
-        Position = Entity||room_throneroom|
-        FallbackStoreAnywhere = True
-      Item = GiveCurrency
-        Currency = BeerManager
-        Amount = Int|||10000
-        FallbackStoreAnywhere = True
-        Position = Entity||room_throneroom|
-      Item = GiveCurrency
-        Currency = EvilnessManager
-        Amount = Int|||10000
-        FallbackStoreAnywhere = True
-        Position = Entity||room_throneroom|
-      Item = GiveCurrency
-        Currency = FaithManager
-        Amount = Int|||10000
-        FallbackStoreAnywhere = True
-        Position = Entity||room_throneroom|
-      Item = GiveCurrency
-        Currency = GoldManager
-        Amount = Int|||1000000
-        FallbackStoreAnywhere = True
-        Position = Entity||room_throneroom|
-      Item = GiveCurrency
-        Currency = GuruManager
-        Amount = Int|||10000
-        FallbackStoreAnywhere = True
-        Position = Entity||room_throneroom|
-      Item = GiveCurrency
-        Currency = ManaManager
-        Amount = Int|||10000
-        FallbackStoreAnywhere = True
-        Position = Entity||room_throneroom|
-      Item = GiveCurrency
-        Currency = PotionManager
-        Amount = Int|||10000
-        FallbackStoreAnywhere = True
-        Position = Entity||room_throneroom|
+      Item = ForLoopAction
+        LoopCounts = Int|||10
+        Actions
+          Item = GiveCurrency
+            Currency = GoldManager
+            Amount = Int|||1000
+            Position = Entity||rooms/room_treasury1|
+          Item = Wait
+            Duration = Float|||1
       Item = GiveCurrency
         Currency = ToolboxManager
-        Amount = Int|||10000
-        FallbackStoreAnywhere = True
+        Amount = Int|||100
+        FallbackStoreAnywhere = False
+        Position = Entity||rooms/room_workshop|
+      Item = Wait
+        Duration = Float|||1
+      Item = GiveCurrency
+        Currency = EvilnessManager
+        Amount = Int|||1000
+        Position = Entity||rooms/room_evilvault|
+      Item = Wait
+        Duration = Float|||1
+      Item = GiveCurrency
+        Currency = BeerManager
+        Amount = Int|||100
         Position = Entity||room_throneroom|
+      Item = Wait
+        Duration = Float|||1
+      Item = GiveCurrency
+        Currency = BatteryManager
+        Amount = Int|||100
+        Position = Entity||room_throneroom|
+      Item = Wait
+        Duration = Float|||1
+      Item = GiveCurrency
+        Currency = FaithManager
+        Amount = Int|||100
+        Position = Entity||room_throneroom|
+      Item = Wait
+        Duration = Float|||1
+      Item = GiveCurrency
+        Currency = GuruManager
+        Amount = Int|||100
+        Position = Entity||room_throneroom|
+      Item = Wait
+        Duration = Float|||1
+      Item = GiveCurrency
+        Currency = PotionManager
+        Amount = Int|||100
+        FallbackStoreAnywhere = False
+        Position = Entity||room_throneroom|
+      Item = Wait
+        Duration = Float|||1
+      Item = GiveCurrency
+        Currency = ManaManager
+        Amount = Int|||1000
+        Position = Entity||rooms/room_arcanium|
+        FallbackStoreAnywhere = False
+      Item = Wait
+        Duration = Float|||1
 s_my_spawn
   Include = empty_script
   ScriptContainer
