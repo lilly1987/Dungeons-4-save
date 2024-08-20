@@ -329,14 +329,16 @@ s_my_create
         Location = Entity||waypoints/waypoint1|
         Templates
           Item = hero_priestess_gold3
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||v_t|1
+        IsCommentedOut = True
     Triggers
       Item = OnceAfter
         StartDelay = Float|||3
   ScriptVariableContainer
     Variables
-      Item = Int|v_cnt||5
+      Item = Int|v_cnt||10
       Item = Float|v_t||0.125
       Item = EntityList|tmp||
       Item = Entity|v_ent||
@@ -348,7 +350,7 @@ s_my_create_pri
         StartDelay = Float|||5
     Actions
       Item = ForLoopAction
-        LoopCounts = Int|||1
+        LoopCounts = Int|||7
         Actions
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
@@ -384,8 +386,10 @@ s_my_create_pri
             Templates
               Item = hero_priestess_common3
             SpawnedEntitiesVariable = EntityList||tmp|
+            IsCommentedOut = True
           Item = Wait
             Duration = Float||v_t|1
+            IsCommentedOut = True
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
@@ -393,8 +397,10 @@ s_my_create_pri
             Templates
               Item = hero_priestess_elite3
             SpawnedEntitiesVariable = EntityList||tmp|
+            IsCommentedOut = True
           Item = Wait
             Duration = Float||v_t|1
+            IsCommentedOut = True
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
@@ -402,8 +408,10 @@ s_my_create_pri
             Templates
               Item = hero_priestess_gold3
             SpawnedEntitiesVariable = EntityList||tmp|
+            IsCommentedOut = True
           Item = Wait
             Duration = Float||v_t|1
+            IsCommentedOut = True
       Item = ForEach
         LoopVariable = Entity||v_ent|
         Items = EntityList||tmp|
