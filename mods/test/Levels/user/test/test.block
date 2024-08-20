@@ -1,4 +1,17 @@
-﻿world_test
+﻿script_test_
+  Include = empty_script
+  ScriptContainer
+    Triggers
+      Item = OnceAfter
+        StartDelay = Float|||2
+    Actions
+      Item = KillUnit
+        Unit = Entity||hero_priestess_common1|
+      Item = KillUnit
+        Unit = Entity||hero_priestess_elite1|
+      Item = KillUnit
+        Unit = Entity||hero_priestess_gold1|
+world_test
   Include = world
   SceneDescription
     TechLevel = autoDigEntranceThroneroomEntryTiles

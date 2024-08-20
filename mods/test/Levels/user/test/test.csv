@@ -1,1 +1,11 @@
+﻿/gimmick_torturechamber,gimmick_torturechamber,2da6b3a814145853,687,0,636,0,180,0,0,0,0,owner=SinglePlayer
+/gimmick_torturechamber,gimmick_torturechamber,547e6b6b7728951d,681,0,633,0,180,0,0,0,0,owner=SinglePlayer
+/gimmick_torturechamber,gimmick_torturechamber,60bdb95a1e2859c0,693,0,639,0,180,0,0,0,0,owner=SinglePlayer
+/hero_priestess_common,hero_priestess_common,710a69bc1396772b,671.981,0,631.572,0,180,0,0,0,0,owner=SinglePlayer
+/hero_priestess_common1,hero_priestess_common,ccf037019e17e7e,688.153,0,630.962,0,180,0,0,0,0,accessibleByScript;owner=Invalid
+/hero_priestess_elite,hero_priestess_elite,1916364e33354c75,673.5,0,631.5,0,180,0,0,0,0,owner=SinglePlayer
+/hero_priestess_elite1,hero_priestess_elite,76314aab6c9cd800,690.359,0,631.072,0,180,0,0,0,0,accessibleByScript;owner=Invalid
+/hero_priestess_gold,hero_priestess_gold,4ac6ff3677b5e12,674.982,0,631.484,0,180,0,0,0,0,owner=SinglePlayer
+/hero_priestess_gold1,hero_priestess_gold,86c05f198a8588,692.581,0,631.218,0,180,0,0,0,0,accessibleByScript;owner=Invalid
 /room_throneroom,room_throneroom,34506c54648a369e,676.5,0,676.5,0,180,0,0,0,0,owner=Singleplayer
+/scripts/script_test_,script_test_,72cd5d7a29a8bb7f,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
