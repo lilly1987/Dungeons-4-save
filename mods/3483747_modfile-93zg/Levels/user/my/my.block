@@ -444,7 +444,7 @@ s_my_evil
         Location = Entity||spawners/spawner_eddyn_patrol_sandbox_my|
         Radius = 32
       Item = UncoverFogOfWar
-        Location = Entity||spawners/spawner_eddyn_patrol_sandbox|
+        Location = Entity||spawners/spawner_eddyn_patrol_sandbox1|
         Radius = 32
       Item = EnableEvilDeedManager
       Item = SetEvilDeedManagerInterval
