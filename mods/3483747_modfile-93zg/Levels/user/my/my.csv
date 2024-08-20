@@ -17,7 +17,7 @@
 /combat_teams/combat_team_western_dwarves,combat_team_western_dwarves,70eed4eb11d1bccd,3483.522,0,495.122,0,180,0,0,0,0,MakeThemGroupStrengthFixed.GroupStrength=5
 /combat_teams/combat_team_western_melee,combat_team_western_melee,4420e210148148ca,3485.436,0,516.911,0,180,0,0,0,0,MakeThemGroupStrengthFixed.GroupStrength=5
 /combat_teams/combat_team_western_range,combat_team_western_range,64e313c92335d872,3453.276,0,461.174,0,180,0,0,0,0,MakeThemGroupStrengthFixed.GroupStrength=5
-/entrances/entrance,entrance,4249daa771a86b4a,577.5,0,328.5,0,180,0,0,0,0,accessibleByScript;TileArea.Tiles=140 95#140 96#140 97#140 98#140 99#140 100#140 101#141 95#141 96#141 97#141 98#141 99#141 100#141 101#142 95#142 96#142 97#142 98#142 99#142 100#142 101#143 95#143 96#143 97#143 98#143 99#143 100#143 101#144 95#144 96#144 97#144 98#144 99#144 100#144 101#145 95#145 96#145 97#145 98#145 99#145 100#145 101#146 95#146 96#146 97#146 98#146 99#146 100#146 101#189 106#189 107#189 108#189 109#189 110#189 111#189 112#190 106#190 107#190 108#190 109#190 110#190 111#190 112#191 106#191 107#191 108#191 109#191 110#191 111#191 112#192 106#192 107#192 108#192 109#192 110#192 111#192 112#193 106#193 107#193 108#193 109#193 110#193 111#193 112#194 106#194 107#194 108#194 109#194 110#194 111#194 112#195 106#195 107#195 108#195 109#195 110#195 111#195 112;Teleport.Target=Entity||entrances/entrance_outside|
+/entrances/entrance,entrance,4249daa771a86b4a,580.5,0,322.5,0,0,0,0,0,0,accessibleByScript;TileArea.Tiles=141 93#141 94#141 95#141 96#141 97#141 98#141 99#142 93#142 94#142 95#142 96#142 97#142 98#142 99#143 93#143 94#143 95#143 96#143 97#143 98#143 99#144 93#144 94#144 95#144 96#144 97#144 98#144 99#145 93#145 94#145 95#145 96#145 97#145 98#145 99#146 93#146 94#146 95#146 96#146 97#146 98#146 99#147 93#147 94#147 95#147 96#147 97#147 98#147 99#190 104#190 105#190 106#190 107#190 108#190 109#190 110#191 104#191 105#191 106#191 107#191 108#191 109#191 110#192 104#192 105#192 106#192 107#192 108#192 109#192 110#193 104#193 105#193 106#193 107#193 108#193 109#193 110#194 104#194 105#194 106#194 107#194 108#194 109#194 110#195 104#195 105#195 106#195 107#195 108#195 109#195 110#196 104#196 105#196 106#196 107#196 108#196 109#196 110;Teleport.Target=Entity||entrances/entrance_outside|
 /entrances/entrance_outside,entrance_outside,7980ef1f2cc2c181,3361.26,0,356.96,0,40,0,0,0,0,accessibleByScript;Teleport.Target=Entity||entrances/entrance|
 /gimmick_arcanium,gimmick_arcanium,7d12c08a1701459a,658.5,0,703.5,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_arena,gimmick_arena,101150a130a06607,733.576,0,604.291,0,180,0,0,0,0,owner=SinglePlayer
@@ -197,6 +197,10 @@
 /gimmick_graveyard_vampire_queen,gimmick_graveyard_vampire_queen,bbaa490ccf11ad,737.654,0,665.924,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_graveyard_vampire_queen,gimmick_graveyard_vampire_queen,d42e53123e75128,725.762,0,671.255,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_graveyard_vampire_queen,gimmick_graveyard_vampire_queen,ec754364924c321,731.762,0,659.255,0,180,0,0,0,0,owner=SinglePlayer
+/gimmick_guardroom,gimmick_guardroom,48c4557c467bcd66,627,0,621,0,180,0,0,0,0,owner=Invalid
+/gimmick_guardroom,gimmick_guardroom,cb5beee376de104,549,0,369,0,180,0,0,0,0,
+/gimmick_guardroom_flag,gimmick_guardroom_flag,1595860553f2463b,625.5,0,613.5,0,180,0,0,0,0,owner=SinglePlayer
+/gimmick_guardroom_flag,gimmick_guardroom_flag,16c55a32568fc730,544.5,0,364.5,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_potionlodge,gimmick_potionlodge,262ca9306105c169,658.5,0,736.5,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_powerchamber,gimmick_powerchamber,121ccb7d7f53ada6,675.316,0,776.923,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_powerchamber,gimmick_powerchamber,19dd7c22fe65a7c,675.316,0,782.923,0,180,0,0,0,0,owner=SinglePlayer
@@ -322,6 +326,8 @@
 /gimmick_torturechamber,gimmick_torturechamber,efb9ccb50ab6ba3,641.827,0,654.184,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_torturechamber,gimmick_torturechamber,f4becd4763c4517,611.715,0,636.258,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_torturechamber,gimmick_torturechamber,f5830fc41ff74a4,635.705,0,672.119,0,180,0,0,0,0,owner=SinglePlayer
+/gimmick_totem,gimmick_totem,2ee7738514eba817,753,0,708,0,180,0,0,0,0,owner=SinglePlayer
+/gimmick_workshop,gimmick_workshop,1d204f53010fd147,565.5,0,367.5,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_workshop,gimmick_workshop,1e99711105c9a9e4,604.5,0,736.5,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_workshop_battery,gimmick_workshop_battery,263c5e8007bc066a,624,0,736.5,0,180,0,0,0,0,owner=SinglePlayer
 /goals/goal_common_skir_destroy_spawner,goal_common_skir_destroy_spawner,1f1e5e1b3dcc5c4a,0,0,0,0,0,0,0,0,0,accessibleByScript
@@ -341,6 +347,7 @@
 /rooms/room_evilvault41,room_evilvault,7921381c19d00256,781.5,0,1030.5,0,180,0,0,0,0,accessibleByScript;owner=SinglePlayer;TileArea.Tiles=211 255#211 256#211 257#211 258#211 259#211 260#211 261#211 262#211 263#211 264#212 255#212 256#212 257#212 258#212 259#212 260#212 261#212 262#212 263#212 264#213 255#213 256#213 257#213 258#213 259#213 260#213 261#213 262#213 263#213 264#214 255#214 256#214 257#214 258#214 259#214 260#214 261#214 262#214 263#214 264#215 255#215 256#215 257#215 258#215 259#215 260#215 261#215 262#215 263#215 264#216 255#216 256#216 257#216 258#216 259#216 260#216 261#216 262#216 263#216 264#217 255#217 256#217 257#217 258#217 259#217 260#217 261#217 262#217 263#217 264#218 255#218 256#218 257#218 258#218 259#218 260#218 261#218 262#218 263#218 264#219 255#219 256#219 257#219 258#219 259#219 260#219 261#219 262#219 263#219 264#220 255#220 256#220 257#220 258#220 259#220 260#220 261#220 262#220 263#220 264
 /rooms/room_graveyard,room_graveyard,6303f36b0bc3b870,718.5,0,673.5,0,178.14,0,0,0,0,owner=SinglePlayer;TileArea.Tiles=233 220#233 221#233 222#234 219#234 220#234 221#234 222#235 219#235 220#235 221#235 222#236 219#236 220#236 221#236 222#233 219#233 223#233 224#233 225#233 226#233 227#233 228#234 223#234 224#234 225#234 226#234 227#234 228#235 223#235 224#235 225#235 226#235 227#235 228#236 223#236 224#236 225#236 226#236 227#236 228#237 219#237 220#237 221#237 222#237 223#237 224#237 225#237 226#237 227#237 228#238 219#238 220#238 221#238 222#238 223#238 224#238 225#238 226#238 227#238 228#239 219#239 220#239 221#239 222#239 223#239 224#239 225#239 226#239 227#239 228#240 219#240 220#240 221#240 222#240 223#240 224#240 225#240 226#240 227#240 228#241 219#241 220#241 221#241 222#241 223#241 224#241 225#241 226#241 227#241 228#242 219#242 220#242 221#242 222#242 223#242 224#242 225#242 226#242 227#242 228#233 229#233 230#234 229#234 230#235 229#235 230#236 229#236 230#237 229#237 230#238 229#238 230#239 229#239 230#240 229#240 230#241 229#241 230#242 229#242 230#243 219#243 220#243 221#243 222#243 223#243 224#243 225#243 226#243 227#243 228#244 219#244 220#244 221#244 222#244 223#244 224#244 225#244 226#244 227#244 228#245 219#245 220#245 221#245 222#245 223#245 224#245 225#245 226#245 227#245 228#246 219#246 220#246 221#246 222#246 223#246 224#246 225#246 226#246 227#246 228#243 229#243 230#244 229#244 230#245 229#245 230#246 229#246 230#233 231#234 231#235 231#236 231#237 231#238 231#239 231#240 231#241 231#242 231#243 231#244 231#245 231#246 231
 /rooms/room_guardroom,room_guardroom,1d87589b6aa04a92,637.5,0,610.5,0,180,0,0,0,0,accessibleByScript;owner=SinglePlayer;TileArea.Tiles=212 203#212 204#212 205#212 206#212 207#212 208#213 203#213 204#213 205#213 206#213 207#213 208#214 203#214 204#214 205#214 206#214 207#214 208#215 203#215 204#215 205#215 206#215 207#215 208#216 203#216 204#216 205#216 206#216 207#216 208#217 203#217 204#217 205#217 206#217 207#217 208#211 203#211 204#211 205#211 206#211 207#211 208#212 202#213 202#214 202#215 202#216 202#217 202#207 199#207 200#207 201#207 202#208 198#208 199#208 200#208 201#208 202#209 198#209 199#209 200#209 201#209 202#210 198#210 199#210 200#210 201#210 202#211 198#211 199#211 200#211 201#211 202#207 198#207 203#207 204#207 205#207 206#207 207#207 208#208 203#208 204#208 205#208 206#208 207#208 208#209 203#209 204#209 205#209 206#209 207#209 208#210 203#210 204#210 205#210 206#210 207#210 208#212 198#212 199#212 200#212 201#213 198#213 199#213 200#213 201#214 198#214 199#214 200#214 201#215 198#215 199#215 200#215 201#216 198#216 199#216 200#216 201#217 198#217 199#217 200#217 201
+/rooms/room_guardroom2,room_guardroom,2bdd085c1d8af03c,637.5,0,610.5,0,180,0,0,0,0,accessibleByScript;owner=SinglePlayer;TileArea.Tiles=180 120#180 121#180 122#180 123#180 124#181 120#181 121#181 122#181 123#181 124#182 120#182 121#182 122#182 123#182 124#183 120#183 121#183 122#183 123#183 124#184 120#184 121#184 122#184 123#184 124
 /rooms/room_gurufarm,room_gurufarm,7e910af36eaa6db2,600,0,448.5,0,180,0,0,0,0,accessibleByScript;owner=SinglePlayer;TileArea.Tiles=200 233#200 234#200 235#200 236#200 237#200 238#200 239#200 240#200 241#200 242#201 233#201 234#201 235#201 236#201 237#201 238#201 239#201 240#201 241#201 242#202 233#202 234#202 235#202 236#202 237#202 238#202 239#202 240#202 241#202 242#203 233#203 234#203 235#203 236#203 237#203 238#203 239#203 240#203 241#203 242#204 233#204 234#204 235#204 236#204 237#204 238#204 239#204 240#204 241#204 242#205 233#205 234#205 235#205 236#205 237#205 238#205 239#205 240#205 241#205 242#206 233#206 234#206 235#206 236#206 237#206 238#206 239#206 240#206 241#206 242#207 233#207 234#207 235#207 236#207 237#207 238#207 239#207 240#207 241#207 242#208 233#208 234#208 235#208 236#208 237#208 238#208 239#208 240#208 241#208 242#209 233#209 234#209 235#209 236#209 237#209 238#209 239#209 240#209 241#209 242
 /rooms/room_hideout,room_hideout,187e982c33e10151,718.5,0,700.5,0,180,0,0,0,0,owner=SinglePlayer;TileArea.Tiles=241 233#241 234#241 235#241 236#241 237#241 238#242 233#242 234#242 235#242 236#242 237#242 238#243 233#243 234#243 235#243 236#243 237#243 238#244 233#244 234#244 235#244 236#244 237#244 238#245 233#245 234#245 235#245 236#245 237#245 238#246 233#246 234#246 235#246 236#246 237#246 238
 /rooms/room_necrodancicon,room_necrodancicon,757abab859725f93,493.5,0,526.5,0,180,0,0,0,0,owner=SinglePlayer;TileArea.Tiles=248 219#248 220#248 221#248 222#248 223#248 224#249 219#249 220#249 221#249 222#249 223#249 224#250 219#250 220#250 221#250 222#250 223#250 224#251 219#251 220#251 221#251 222#251 223#251 224#252 219#252 220#252 221#252 222#252 223#252 224#253 219#253 220#253 221#253 222#253 223#253 224
@@ -354,10 +361,12 @@
 /rooms/room_treasury1,room_treasury,4ba627fd7e81a6bd,679.5,0,712.5,0,180,0,0,0,0,accessibleByScript;owner=SinglePlayer;TileArea.Tiles=223 233#223 234#223 236#223 237#223 238#223 239#223 241#223 242#224 234#224 235#224 236#224 237#224 239#224 240#224 241#224 242#225 233#225 234#225 235#225 237#225 238#225 239#225 240#225 242#226 233#226 235#226 236#226 237#226 238#226 240#226 241#226 242#227 233#227 234#227 235#227 236#227 238#227 239#227 240#227 241#228 233#228 234#228 236#228 237#228 238#228 239#228 241#228 242#229 234#229 235#229 237#229 239#229 240#229 241#229 242#230 233#230 234#230 235#230 237#230 238#230 239#230 240#230 242#231 233#231 235#231 236#231 237#231 238#231 240#231 241#231 242#222 233#222 234#222 235#222 236#222 238#222 239#222 240#222 241#229 236
 /rooms/room_vortex,room_vortex,3e7629b05c0ff7a2,553.5,0,661.5,0,180,0,0,0,0,owner=SinglePlayer;TileArea.Tiles=175 212#175 213#175 214#175 215#175 216#175 217#175 218#175 219#175 220#175 221#175 222#175 223#175 224#175 225#175 226#175 227#175 228#175 229#176 212#176 213#176 214#176 215#176 216#176 217#176 218#176 219#176 220#176 221#176 222#176 223#176 224#176 225#176 226#176 227#176 228#176 229#177 212#177 213#177 214#177 215#177 216#177 217#177 218#177 219#177 220#177 221#177 222#177 223#177 224#177 225#177 226#177 227#177 228#177 229#178 212#178 213#178 214#178 215#178 216#178 217#178 218#178 219#178 220#178 221#178 222#178 223#178 224#178 225#178 226#178 227#178 228#178 229#179 212#179 213#179 214#179 215#179 216#179 217#179 218#179 219#179 220#179 221#179 222#179 223#179 224#179 225#179 226#179 227#179 228#179 229#180 212#180 213#180 214#180 215#180 216#180 217#180 218#180 219#180 220#180 221#180 222#180 223#180 224#180 225#180 226#180 227#180 228#180 229#181 212#181 213#181 214#181 215#181 216#181 217#181 218#181 219#181 220#181 221#181 222#181 223#181 224#181 225#181 226#181 227#181 228#181 229#182 212#182 213#182 214#182 215#182 216#182 217#182 218#182 219#182 220#182 221#182 222#182 223#182 224#182 225#182 226#182 227#182 228#182 229#183 212#183 213#183 214#183 215#183 216#183 217#183 218#183 219#183 220#183 221#183 222#183 223#183 224#183 225#183 226#183 227#183 228#183 229#184 212#184 213#184 214#184 215#184 216#184 217#184 218#184 219#184 220#184 221#184 222#184 223#184 224#184 225#184 226#184 227#184 228#184 229#185 212#185 213#185 214#185 215#185 216#185 217#185 218#185 219#185 220#185 221#185 222#185 223#185 224#185 225#185 226#185 227#185 228#185 229#186 212#186 213#186 214#186 215#186 216#186 217#186 218#186 219#186 220#186 221#186 222#186 223#186 224#186 225#186 226#186 227#186 228#186 229#187 212#187 213#187 214#187 215#187 216#187 217#187 218#187 219#187 220#187 221#187 222#187 223#187 224#187 225#187 226#187 227#187 228#187 229#188 212#188 213#188 214#188 215#188 216#188 217#188 218#188 219#188 220#188 221#188 222#188 223#188 224#188 225#188 226#188 227#188 228#188 229#189 212#189 213#189 214#189 215#189 216#189 217#189 218#189 219#189 220#189 221#189 222#189 223#189 224#189 225#189 226#189 227#189 228#189 229#190 212#190 213#190 214#190 215#190 216#190 217#190 218#190 219#190 220#190 221#190 222#190 223#190 224#190 225#190 226#190 227#190 228#190 229#191 212#191 213#191 214#191 215#191 216#191 217#191 218#191 219#191 220#191 221#191 222#191 223#191 224#191 225#191 226#191 227#191 228#191 229#192 212#192 213#192 214#192 215#192 216#192 217#192 218#192 219#192 220#192 221#192 222#192 223#192 224#192 225#192 226#192 227#192 228#192 229#193 212#193 213#193 214#193 215#193 216#193 217#193 218#193 219#193 220#193 221#193 222#193 223#193 224#193 225#193 226#193 227#193 228#193 229#194 212#194 213#194 214#194 215#194 216#194 217#194 218#194 219#194 220#194 221#194 222#194 223#194 224#194 225#194 226#194 227#194 228#194 229#175 230#175 231#176 230#176 231#177 230#177 231#178 230#178 231#179 230#179 231#180 230#180 231#181 230#181 231#182 230#182 231#183 230#183 231#184 230#184 231#185 230#185 231#186 230#186 231#187 230#187 231#188 230#188 231#189 230#189 231#190 230#190 231#191 230#191 231#192 230#192 231#193 230#193 231#194 230#194 231
 /rooms/room_workshop,room_workshop,1183166913cb2baf,679.5,0,712.5,0,180,0,0,0,0,accessibleByScript;owner=SinglePlayer;TileArea.Tiles=200 244#200 245#200 246#200 247#200 248#200 249#200 250#200 251#200 252#200 253#201 244#201 245#201 246#201 247#201 248#201 249#201 250#201 251#201 252#201 253#202 244#202 245#202 246#202 247#202 248#202 249#202 250#202 251#202 252#202 253#203 244#203 245#203 246#203 247#203 248#203 249#203 250#203 251#203 252#203 253#204 244#204 245#204 246#204 247#204 248#204 249#204 250#204 251#204 252#204 253#205 244#205 245#205 246#205 247#205 248#205 249#205 250#205 251#205 252#205 253#206 244#206 245#206 246#206 247#206 248#206 249#206 250#206 251#206 252#206 253#207 244#207 245#207 246#207 247#207 248#207 249#207 250#207 251#207 252#207 253#208 244#208 245#208 246#208 247#208 248#208 249#208 250#208 251#208 252#208 253#209 244#209 245#209 246#209 247#209 248#209 249#209 250#209 251#209 252#209 253
+/rooms/room_workshop2,room_workshop,6463211c6d3d2ef3,565.5,0,367.5,0,180,0,0,0,0,accessibleByScript;owner=SinglePlayer;TileArea.Tiles=186 120#186 121#186 122#186 123#186 124#187 120#187 121#187 122#187 123#187 124#188 120#188 121#188 122#188 123#188 124#189 120#189 121#189 122#189 123#189 124#190 120#190 121#190 122#190 123#190 124
 /room_throneroom,room_throneroom,824167e3b7393b5,676.5,0,676.5,0,180,0,0,0,0,accessibleByScript;owner=SinglePlayer;TileArea.Tiles=219 219#219 220#219 221#219 222#219 223#219 224#219 225#219 226#219 227#219 228#219 229#219 230#219 231#220 219#220 220#220 221#220 222#220 223#220 224#220 225#220 226#220 227#220 228#220 229#220 230#220 231#221 219#221 220#221 221#221 222#221 223#221 224#221 225#221 226#221 227#221 228#221 229#221 230#221 231#222 219#222 220#222 221#222 222#222 223#222 224#222 225#222 226#222 227#222 228#222 229#222 230#222 231#223 219#223 220#223 221#223 222#223 223#223 224#223 225#223 226#223 227#223 228#223 229#223 230#223 231#224 219#224 220#224 221#224 222#224 223#224 224#224 225#224 226#224 227#224 228#224 229#224 230#224 231#225 219#225 220#225 221#225 222#225 223#225 224#225 225#225 226#225 227#225 228#225 229#225 230#225 231#226 219#226 220#226 221#226 222#226 223#226 224#226 225#226 226#226 227#226 228#226 229#226 230#226 231#227 219#227 220#227 221#227 222#227 223#227 224#227 225#227 226#227 227#227 228#227 229#227 230#227 231#228 219#228 220#228 221#228 222#228 223#228 224#228 225#228 226#228 227#228 228#228 229#228 230#228 231#229 219#229 220#229 221#229 222#229 223#229 224#229 225#229 226#229 227#229 228#229 229#229 230#229 231#230 219#230 220#230 221#230 222#230 223#230 224#230 225#230 226#230 227#230 228#230 229#230 230#230 231#231 219#231 220#231 221#231 222#231 223#231 224#231 225#231 226#231 227#231 228#231 229#231 230#231 231;list=e_room_throneroom
 /scripts/script_skir_hero_level_manager,script_skir_hero_level_manager,1333f61c78a82dc4,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
 /scripts/s_my_evil,s_my_evil,451840905b1e0cd0,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
 /scripts/s_my_kill,s_my_kill,957ce26092b8fdc,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
+/scripts/s_my_money,s_my_money,166e46742bf727c,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
 /scripts/s_my_spawn,s_my_spawn,33c4c1225553ba9f,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
 /scripts/s_my_spawn_hero_priestess,s_my_spawn_hero_priestess,3556c52b010a3c08,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
 /spawners/spawner_camp,spawner_camp,1cc9e974786f3052,3437.597,0,395.575,0,220,0,0,0,0,OutbuildingBuilder.MatchDistance=35;list=my_spawner
@@ -387,37 +396,110 @@
 /spawners/spawner_eddyn_patrol_sandbox,spawner_eddyn_patrol_sandbox,6b309590581b0dc6,3548.027,0,365.753,0,180,0,0,0,0,accessibleByScript;EvilDeedDynamicReachPosition.Target=EntityList||waypoints/waypoint_end|
 /spawners/spawner_eddyn_patrol_sandbox_my,spawner_eddyn_patrol_sandbox_my,2b9630955c00fee3,3400.365,0,550.134,0,180,0,0,0,0,accessibleByScript
 /spawners/spawner_vil,spawner_vil,789705350526e24a,3538.682,0,517.64,0,220,0,0,0,0,OutbuildingBuilder.MatchDistance=35;list=my_spawner
+/tower_city_hero_cannon,tower_city_hero_cannon,480146372c29eb69,578.473,0,363.401,0,180,0,0,0,0,owner=SinglePlayer
+/tower_city_hero_crossbow,tower_city_hero_crossbow,2cf7d2818a3193a,583.992,0,363.005,0,180,0,0,0,0,owner=SinglePlayer
+/tower_city_hero_electric,tower_city_hero_electric,3afec17b779eb2a9,589.853,0,361.883,0,180,0,0,0,0,owner=SinglePlayer
+/tower_city_hero_hammer,tower_city_hero_hammer,2cbdb4b648ae0015,595.682,0,362.36,0,180,0,0,0,0,owner=SinglePlayer
+/tower_vill_hero_cannon,tower_vill_hero_cannon,b82f6a663ca2f47,601.498,0,362.268,0,180,0,0,0,0,owner=SinglePlayer
 /tower_vill_hero_crossbow,tower_vill_hero_crossbow,4026ee61ecb4328,3526.144,0,503.838,0,220,0,0,0,0,
+/tower_vill_hero_crossbow,tower_vill_hero_crossbow,55e9842e2df60d2f,607.129,0,362.477,0,180,0,0,0,0,owner=SinglePlayer
 /tower_vill_hero_crossbow,tower_vill_hero_crossbow,7dd925055188c1df,3503.07,0,522.6,0,220,0,0,0,0,
-/trap_ground_spike_medium,trap_ground_spike_medium,10f1b49816d73102,595.5,0,316.5,0,90,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,13b95979234a2785,583.5,0,307.5,0,90,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,25647f9051d404b7,607.5,0,325.5,0,90,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,2c2b05d674eab1af,604.5,0,331.5,0,180,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,2db055cd6202db14,622.5,0,331.5,0,90,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,30da2882035025a6,595.5,0,322.5,0,180,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,316b67e34cca1794,598.5,0,322.5,0,180,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,31c94b5b1e566b44,577.5,0,304.5,0,90,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,36cb7dd5786c529d,598.5,0,331.5,0,180,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,374c897408169d08,595.5,0,331.5,0,180,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,3a229e7f40ed9745,622.5,0,334.5,0,90,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,3c56750f00df419a,589.5,0,313.5,0,90,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,440c62dd01c55f1a,580.5,0,313.5,0,90,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,4cfdf3874f590ed4,607.5,0,322.5,0,90,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,4f3dda1510869adb,592.5,0,331.5,0,180,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,512b4a350ea6ce1f,571.5,0,313.5,0,90,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,516832410bde632d,601.5,0,331.5,0,180,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,52c3973009df422a,574.5,0,307.5,0,90,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,5697a7b65096d364,610.5,0,331.5,0,180,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,5b97833d78785c99,601.5,0,322.5,0,180,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,5deb9324ae6a2d4,580.5,0,310.5,0,90,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,5e77e41b30a7f005,613.5,0,331.5,0,180,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,6147f79e6b448789,592.5,0,322.5,0,180,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,6b5742dd13517a90,571.5,0,310.5,0,90,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,6bdf324638f13dc4,589.5,0,310.5,0,90,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,6d9f211370a51248,616.5,0,331.5,0,180,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,7d50c5db1b5d7ff3,607.5,0,331.5,0,180,0,0,0,0,owner=SinglePlayer
-/trap_ground_spike_medium,trap_ground_spike_medium,daff1f00c877a02,631.5,0,337.5,0,90,0,0,0,0,owner=SinglePlayer
-/trap_simple_pusher,trap_simple_pusher,7f2ed27a303a5c51,586.5,0,394.5,0,90,0,0,0,0,owner=SinglePlayer
+/tower_vill_hero_electric,tower_vill_hero_electric,61b800d422451481,612.631,0,362.604,0,180,0,0,0,0,owner=SinglePlayer
+/tower_vill_hero_hammer,tower_vill_hero_hammer,7ffad7df48e976d3,618.372,0,362.431,0,180,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,10f5bb6f6767017c,574.553,0,343.332,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,11963b21011e4cdc,628.587,0,343.55,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,15afa2b53ff70881,649.473,0,355.371,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,19a567b749134fc2,601.385,0,343.443,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,19eac2c74cb32895,559.718,0,355.48,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,1f61de40339c53d8,577.526,0,349.311,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,1f7e917902a6050c,667.473,0,355.371,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,217bce2b4c88c168,640.62,0,349.45,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,21f7df091fd0e1c2,595.591,0,349.343,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,2a8727341ad2d33e,631.96,0,355.439,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,2f6663eb4a3ffd54,610.385,0,343.443,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,3064d0a82d25a85c,565.625,0,337.486,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,361a3a20342bebd,550.718,0,355.48,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,374c897408169d08,583.5,0,337.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,380849a84b16af7a,550.526,0,349.311,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,3850700f2cbfda42,622.62,0,349.45,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,3c46c2967abc5bcd,565.553,0,343.332,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,3df23aa63196a02f,574.5,0,337.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,3e2e4b2a21454888,556.553,0,343.332,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,415d175942fd140b,592.415,0,337.43,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,425286d0c0edcbe,622.781,0,355.458,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,452b774e3058cb6d,568.526,0,349.311,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,4c8649545d3a4f10,607.323,0,328.509,0,270,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,4e1e7bf96d47ad8d,592.385,0,343.443,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,4e83c1713c526536,586.781,0,355.458,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,5124210a0d3e97b8,628.5,0,337.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,5168bc1b46ad192d,577.718,0,355.48,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,5cf7ff7948bced6c,586.5,0,349.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,5e4e4823124741d7,649.62,0,349.45,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,612baecb3c31ac32,604.591,0,349.343,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,6308cdaf2ef69b3f,613.591,0,349.343,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,651e2a055599a5f8,658.473,0,355.371,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,6532dcd32243bbba,631.62,0,349.45,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,681f875f55b89182,613.781,0,355.458,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,6deed5b905a0bedd,646.587,0,343.55,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,7012f50c2308d814,595.781,0,355.458,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,71ece7885c1f93b0,583.385,0,343.443,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,78597f5462b9cbeb,556.625,0,337.486,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,7e4dbaca7e454b5a,637.587,0,343.55,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,7ee2fe6d39e27126,619.587,0,343.55,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,8d19c82339a1f75,568.718,0,355.48,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,9f146363c3a8949,619.5,0,337.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,a65a8370fb3d9e5,640.473,0,355.371,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,d021c7564d426a4,610.415,0,337.43,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,d0aae610d061074,559.526,0,349.311,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,ee58a414ff026af,601.415,0,337.43,0,90,0,0,0,0,owner=SinglePlayer
+/trap_ground_spike_medium,trap_ground_spike_medium,f08a3b433ca3dec,604.781,0,355.458,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_pusher,trap_simple_pusher,12bf86c271df2aba,655.5,0,355.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_pusher,trap_simple_pusher,4099bd9a6416c0a9,550.5,0,349.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_pusher,trap_simple_pusher,e94d5796a810ed0,634.5,0,343.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,16fd3ecc1edc49f7,586.5,0,337.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,18de5f6e57f5b788,580.268,0,355.585,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,1ba477dc502dd2cb,586.49,0,349.404,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,1cecddc44205328d,630.94,0,349.584,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,22a836200eb08259,589.268,0,355.585,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,2600a2881c79cc4c,595.49,0,349.404,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,28f6a5b32e43fc7d,616.268,0,355.585,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,29d4b70c6f69b925,577.49,0,349.404,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,2ac1c8032bcf48e5,667.5,0,355.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,2b1d9e7072696722,622.351,0,343.264,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,2c98159052bf1915,646.5,0,343.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,2e724eb04e116d4b,648.94,0,349.584,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,2fc3aead1f44e779,568.49,0,349.404,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,31987dbe14211a42,595.351,0,343.264,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,36e9402871f93a1e,607.268,0,355.585,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,389f6a1e1fb72207,625.268,0,355.585,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,3affad8359e4c23c,619.5,0,337.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,3b8a50782cb40f0c,622.49,0,349.404,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,3ba229a568de6044,553.268,0,355.585,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,3caba4923d4c8d06,562.268,0,355.585,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,3d489b2e7c6e2534,604.49,0,349.404,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,4666c4d8318495e4,613.49,0,349.404,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,4c10066250912ab9,601.5,0,337.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,501b1329629aaba1,568.352,0,343.169,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,5359f72344169b63,634.268,0,355.585,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,56ed4f345594a8ab,604.351,0,343.264,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,5b462509444e1b50,628.5,0,337.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,5dcf4f3905a07a7b,639.94,0,349.584,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,614d7c685eda6610,559.351,0,343.264,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,6614f45e7f9bd45d,613.351,0,343.264,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,66b530466611ef20,577.352,0,343.169,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,7170217c7a6eb406,571.268,0,355.585,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,733bc937787af5d0,610.5,0,337.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,75c9317214bc50d7,556.5,0,337.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,787a97ac3bac67c2,559.49,0,349.404,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,7a2cad03106f545a,598.268,0,355.585,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,7d48ad66317bd3b3,643.268,0,355.585,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,7f970abc4a15159a,574.5,0,337.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,86cc12747f847f3,565.5,0,337.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_simple_saw,trap_simple_saw,f7828e33e20bd62,586.352,0,343.169,0,90,0,0,0,0,owner=SinglePlayer
+/trap_trigger_slimeball,trap_trigger_slimeball,5abab5f661c183c2,552,0,343.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_trigger_slimeball,trap_trigger_slimeball,7c94e8d90175d83e,657,0,349.5,0,270,0,0,0,0,owner=SinglePlayer
+/trap_trigger_slimeball,trap_trigger_slimeball,985184d2e07abfb,546,0,355.5,0,90,0,0,0,0,owner=SinglePlayer
+/trap_trigger_slimeball,trap_trigger_slimeball,b26ea4a2c7f76cd,636,0,337.5,0,270,0,0,0,0,owner=SinglePlayer
 /type_spawner_pri,type_spawner_pri,3c7b75053e71b4fd,0,0,0,0,0,0,0,0,0,
 /waypoints/waypoint1,waypoint,68af646b0c789267,637.805,0,610.604,0,180,0,0,0,0,accessibleByScript;list=e_waypoint
 /waypoints/waypoint_end,waypoint,353e0b53648ab2ef,3345.696,0,351.662,0,180,0,0,0,0,accessibleByScript

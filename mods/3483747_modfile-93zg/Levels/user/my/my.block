@@ -428,7 +428,7 @@ s_my_evil
   ScriptContainer
     Triggers
       Item = OnceAfter
-        StartDelay = Float|||5
+        StartDelay = Float|||3
     Actions
       Item = UncoverFogOfWar
         Location = Entity||spawners/spawner_eddyn_patrol_sandbox_my|
@@ -464,7 +464,7 @@ s_my_money
   ScriptContainer
     Triggers
       Item = OnceAfter
-        StartDelay = Float|||10
+        StartDelay = Float|||3
     Actions
       Item = ForLoopAction
         LoopCounts = Int|||50
@@ -476,15 +476,6 @@ s_my_money
           Item = Wait
             Duration = Float||v_t|1
             IsCommentedOut = True
-      Item = Wait
-        Duration = Float||v_t|1
-      Item = ForLoopAction
-        LoopCounts = Int|||50
-        Actions
-          Item = GiveCurrency
-            Currency = EvilnessManager
-            Amount = Int|||20
-            Position = Entity||rooms/room_evilvault105|
       Item = Wait
         Duration = Float||v_t|1
       Item = ForLoopAction
@@ -551,7 +542,7 @@ s_my_spawn
       Item = PeriodicTrigger
         Duration = Float||v_every|60
       Item = OnceAfter
-        StartDelay = Float|||5
+        StartDelay = Float|||3
     AfterPlay = Nothing
     Actions
       Item = FillList
@@ -679,11 +670,6 @@ s_my_spawn_hero_priestess
         SpawnedEntitiesVariable = EntityList||v_created|
       Item = Wait
         Duration = Float|||1
-      Item = GiveOrderToSelectionGroup
-        SelectionGroup = EntityList||v_created|
-        Order = StopOrder
-      Item = Wait
-        Duration = Float|||1
       Item = ForEach
         Items = EntityList||v_created|
         Actions
@@ -702,11 +688,38 @@ s_my_spawn_hero_priestess
         Actions
           Item = KillUnit
             Unit = Entity||v_ent|
+      Item = Wait
+        Duration = Float|||1
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = AIPlayer5
+        Location = Entity||entrances/entrance|
+        Templates
+          Item = hero_priestess_gold2
+        SpawnedEntitiesVariable = EntityList||v_created|
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = AIPlayer5
+        Location = Entity||entrances/entrance|
+        Templates
+          Item = hero_priestess_elite2
+        SpawnedEntitiesVariable = EntityList||v_created|
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|0
+        Owner = AIPlayer5
+        Location = Entity||entrances/entrance|
+        Templates
+          Item = hero_priestess_common2
+        SpawnedEntitiesVariable = EntityList||v_created|
+      Item = GiveOrderToSelectionGroup
+        SelectionGroup = EntityList||v_created|
+        Order = MoveAttackOrder
+          Target = Entity||room_throneroom|
     Triggers
       Item = PeriodicTrigger
         Duration = Float||v_every|60
       Item = OnceAfter
-        StartDelay = Float|||5
+        StartDelay = Float|||3
     AfterPlay = Nothing
   ScriptVariableContainer
     Variables
@@ -718,7 +731,7 @@ spawner_eddyn_patrol_sandbox_my
   Include = spawner_eddyn_patrol_sandbox
 type_spawner_pri
   Include = type_base
-world_skir_tut_empty
+world_my
   Include = world
   SceneDescription
     Regions
@@ -732,7 +745,7 @@ world_skir_tut_empty
         TexturesGuid = 
       Item
         Position = 1100 100
-        Size = 100 100
+        Size = 250 250
         Owner = Invalid
         Template = OutsideRegion
         LightTheme = 
