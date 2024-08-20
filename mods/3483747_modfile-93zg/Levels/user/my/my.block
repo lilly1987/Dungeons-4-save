@@ -243,6 +243,9 @@ player_playable_my
       Item = res_snot.stage_4
       Item = res_snot.stage_5
       Item = res_snot.stage_6
+      Item = res_totem.stage_1
+      Item = res_totem.stage_2
+      Item = res_totem.stage_3
 s_my_award
   Include = empty_script
   ScriptContainer
@@ -328,22 +331,25 @@ s_my_create
           Item = hero_priestess_gold3
       Item = Wait
         Duration = Float||v_t|1
-      Item = Comment
-        IsCommentedOut = True
-        Comment = ""
+    Triggers
+      Item = OnceAfter
+        StartDelay = Float|||3
+  ScriptVariableContainer
+    Variables
+      Item = Int|v_cnt||5
+      Item = Float|v_t||0.125
+      Item = EntityList|tmp||
+      Item = Entity|v_ent||
+s_my_create_pri
+  Include = empty_script
+  ScriptContainer
+    Triggers
+      Item = OnceAfter
+        StartDelay = Float|||5
+    Actions
       Item = ForLoopAction
+        LoopCounts = Int|||1
         Actions
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint1|
-            Templates
-              Item = hero_priestess_gold3
-            SpawnedEntitiesVariable = EntityList||tmp|
-            IsCommentedOut = True
-          Item = Wait
-            Duration = Float||v_t|1
-            IsCommentedOut = True
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
@@ -398,7 +404,6 @@ s_my_create
             SpawnedEntitiesVariable = EntityList||tmp|
           Item = Wait
             Duration = Float||v_t|1
-        LoopCounts = Int|||1
       Item = ForEach
         LoopVariable = Entity||v_ent|
         Items = EntityList||tmp|
@@ -414,9 +419,6 @@ s_my_create
         Actions
           Item = KillUnit
             Unit = Entity||v_ent|
-    Triggers
-      Item = OnceAfter
-        StartDelay = Float|||5
   ScriptVariableContainer
     Variables
       Item = Int|v_cnt||5
