@@ -593,16 +593,23 @@ s_my_spawn 2
       Item = PeriodicTrigger
         Duration = Float||v_every|60
       Item = OnceAfter
-        StartDelay = Float|||5
+        StartDelay = Float|||2
     Actions
       Item = SpawnTemplate
         Template = hero_priestess_common
         Owner = AIPlayer5
         SpawnedEntityVariable = Entity||v_spawn_f|
+        Location = Entity||entrances/entrance|
         IsCommentedOut = True
       Item = AddEntityToList
         Entity = Entity||v_spawn_f|
         EntityList = EntityList||v_spawn|
+        IsCommentedOut = True
+      Item = ActivateEntitiesInSelectionGroup
+        SelectionGroup = EntityList||v_spawn|
+        IsCommentedOut = True
+      Item = ActivateEntity
+        Entity = Entity||v_spawn_f|
         IsCommentedOut = True
       Item = AddRaidToSelectionGroup
         Raid = Entity||v_spawn_f|
@@ -611,6 +618,10 @@ s_my_spawn 2
       Item = SpawnNow
         Spawner = Entity||v_spawn_f|
         SpawnedSelectionGroup = EntityList||my_spawner|
+        IsCommentedOut = True
+      Item = AddMembersOfRaidAction
+        Raid = Entity||v_spawn_f|
+        Target = EntityList||e_room_throneroom|
         IsCommentedOut = True
       Item = SpawnIfUnrestrictedFromList
         Spawners = EntityList||my_spawner|
@@ -626,7 +637,6 @@ s_my_spawn 2
         Location = Entity||v_spawn_f|
         Radius = 15
         FowVariable = Entity||v_spawn_f|
-        IsCommentedOut = True
   ScriptVariableContainer
     Variables
       Item = Int|v_every||60

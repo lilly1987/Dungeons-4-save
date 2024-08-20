@@ -370,6 +370,7 @@
 /scripts/s_my_evil,s_my_evil,451840905b1e0cd0,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
 /scripts/s_my_kill,s_my_kill,957ce26092b8fdc,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
 /scripts/s_my_money,s_my_money,166e46742bf727c,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
+/scripts/s_my_spawn 2,s_my_spawn 2,3bc2c9bc601e090e,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
 /scripts/s_my_spawn,s_my_spawn,33c4c1225553ba9f,0,0,0,0,0,0,0,0,0,accessibleByScript;owner=SinglePlayer
 /spawners/spawner_camp,spawner_camp,128eb6ce651ba167,3894.913,0,591.189,0,220,0,0,0,0,OutbuildingBuilder.MatchDistance=35;list=my_spawner
 /spawners/spawner_camp,spawner_camp,13d8db6c21bcee0d,3786.024,0,635.078,0,220,0,0,0,0,OutbuildingBuilder.MatchDistance=35;list=my_spawner
