@@ -255,6 +255,51 @@ s_my_award
     Actions
       Item = AwardAchievementAction
         Achievement = ach_main04undead_sacrifice
+s_my_builder
+  Include = empty_script
+  ScriptContainer
+    Triggers
+      Item = EvilDeedDynamicFailing
+        EddynType = eddyntype_builder
+    Actions
+      Item = ActivateEntity
+        Entity = Entity||spawners/spawner_eddyn_patrol_sandbox_builder|
+      Item = ActivateEntity
+        Entity = Entity||spawners/spawner_eddyn_patrol_sandbox_my_builder|
+      Item = TryStartOutbuildingBuildMission
+        IsCommentedOut = True
+s_my_camp
+  Include = empty_script
+  ScriptContainer
+    Triggers
+      Item = OnceAfter
+    Actions
+      Item = ForLoopAction
+        LoopCounts = Int|||10
+        Actions
+          Item = ForLoopAction
+            LoopCounts = Int|||10
+            Actions
+              Item = SpawnTemplate
+                Template = spawner_camp_my
+                Owner = AIPlayer5
+                SpawnedEntityVariable = Entity||v_camp|
+                Location = PosHead||v_pos|0 0 0
+              Item = AddEntityToList
+                Entity = Entity||v_camp|
+                EntityList = EntityList||l_camp|
+              Item
+                IsCommentedOut = 
+            LoopVariable = Int||y|0
+        LoopVariable = Int||x|0
+    Enabled = False
+  ScriptVariableContainer
+    Variables
+      Item = Entity|v_camp||
+      Item = EntityList|l_camp||
+      Item = PosHead|v_pos||0 0 0
+      Item = Int|x||0
+      Item = Int|y||0
 s_my_create
   Include = empty_script
   ScriptContainer
@@ -455,7 +500,7 @@ s_my_evil
       Item = TriggerEvilDeedManager
   ScriptVariableContainer
     Variables
-      Item = Float|v_in||5
+      Item = Float|v_in||60
 s_my_kill
   Include = empty_script
   ScriptContainer
@@ -564,9 +609,17 @@ s_my_spawn
             Outside = True
           Item = EntityListFilterEntityType
             EntityType = type_spawner_pri
+        IsCommentedOut = True
+      Item = ForLoopAction
+        Actions
+          Item = SpawnIfUnrestrictedFromList
+            Spawners = EntityList||my_spawner|
+            SpawnedSelectionGroup = EntityList||v_spawn|
+        LoopCounts = Int||spawn_cnt|3
+        LoopVariable = Int||loop|0
       Item = SpawnIfUnrestrictedFromList
         Spawners = EntityList||my_spawner|
-        SpawnedSelectionGroup = EntityList||v_spawn|
+        IsCommentedOut = True
       Item = AddEntityListToList
         FromEntityList = EntityList||v_spawn|
         ToEntityList = EntityList||g_spawn|
@@ -576,72 +629,21 @@ s_my_spawn
       Item = GetFirstEntityInListAction
         List = EntityList||v_spawn|
         Variable = Entity||v_spawn_f|
-      Item = UncoverFogOfWar
-        Location = Entity||v_spawn_f|
-        Radius = 15
-        FowVariable = Entity||v_spawn_f|
-  ScriptVariableContainer
-    Variables
-      Item = Int|v_every||60
-      Item = EntityList|v_spawn||
-      Item = Entity|v_spawn_f||
-s_my_spawn 2
-  Include = empty_script
-  ScriptContainer
-    AfterPlay = Nothing
-    Triggers
-      Item = PeriodicTrigger
-        Duration = Float||v_every|60
-      Item = OnceAfter
-        StartDelay = Float|||2
-    Actions
-      Item = SpawnTemplate
-        Template = hero_priestess_common
-        Owner = AIPlayer5
-        SpawnedEntityVariable = Entity||v_spawn_f|
-        Location = Entity||entrances/entrance|
-        IsCommentedOut = True
-      Item = AddEntityToList
-        Entity = Entity||v_spawn_f|
-        EntityList = EntityList||v_spawn|
-        IsCommentedOut = True
-      Item = ActivateEntitiesInSelectionGroup
-        SelectionGroup = EntityList||v_spawn|
-        IsCommentedOut = True
-      Item = ActivateEntity
-        Entity = Entity||v_spawn_f|
-        IsCommentedOut = True
-      Item = AddRaidToSelectionGroup
-        Raid = Entity||v_spawn_f|
-        SelectionGroup = EntityList||my_spawner|
-        IsCommentedOut = True
-      Item = SpawnNow
-        Spawner = Entity||v_spawn_f|
-        SpawnedSelectionGroup = EntityList||my_spawner|
-        IsCommentedOut = True
-      Item = AddMembersOfRaidAction
-        Raid = Entity||v_spawn_f|
-        Target = EntityList||e_room_throneroom|
-        IsCommentedOut = True
-      Item = SpawnIfUnrestrictedFromList
-        Spawners = EntityList||my_spawner|
-        SpawnedSelectionGroup = EntityList||v_spawn|
-        IsCommentedOut = True
-      Item = Comment
-        IsCommentedOut = True
-      Item = GetFirstEntityInListAction
-        List = EntityList||v_spawn|
-        Variable = Entity||v_spawn_f|
         IsCommentedOut = True
       Item = UncoverFogOfWar
         Location = Entity||v_spawn_f|
         Radius = 15
         FowVariable = Entity||v_spawn_f|
+        IsCommentedOut = True
+      Item = Log
+        Text = ""
+        IsCommentedOut = True
   ScriptVariableContainer
     Variables
       Item = Int|v_every||60
       Item = EntityList|v_spawn||
       Item = Entity|v_spawn_f||
+      Item = Int|loop||0
 s_my_spawn_hero_priestess
   Include = empty_script
   ScriptContainer
@@ -747,8 +749,36 @@ s_my_spawn_hero_priestess
       Item = Int|v_every||60
       Item = Entity|v_ent||
       Item = EntityList|v_created||
+s_my_uncover
+  Include = empty_script
+  ScriptContainer
+    Actions
+      Item = UncoverAllies
+    Triggers
+      Item = OnceAfter
+spawner_camp_my
+  Include = spawner_camp
+  RemovedComponent = MakeSomeCombatTeam
+  MakeSomeTemplatelist
+    Templates
+      Item = hero_priestess_common
+      Item = hero_priestess_elite
+      Item = hero_priestess_gold
+spawner_eddyn_builder_sandbox_my
+  Include = spawner_eddyn_builder_sandbox
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = HeroesWest
+  EvilDeedDynamic
+    Evilness = 666
 spawner_eddyn_patrol_sandbox_my
   Include = spawner_eddyn_patrol_sandbox
+  EvilDeedDynamic
+    Countdown = 60
+    Evilness = 666
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = HeroesWest
 type_spawner_pri
   Include = type_base
 world_my
@@ -826,6 +856,9 @@ world_my
   ScriptVariableContainer
     Variables
       Item = EntityList|g_spawn||
+      Item = EntityList|g_t_spawn||
+      Item = EntityList|g_r_spawn||
+      Item = Int|spawn_cnt||3
   EvilDeedManager
     TypeLimits
       Item
