@@ -351,7 +351,7 @@ s_my_create
         Owner = SinglePlayer
         Location = Entity||waypoints/waypoint1|
         Templates
-          Item = unit_priestess
+          Item = unit_priestess_gold
       Item = Wait
         Duration = Float||time_m|0
       Item = SpawnTemplateFromList
@@ -360,6 +360,94 @@ s_my_create
         Location = Entity||waypoints/waypoint1|
         Templates
           Item = unit_priestess_gold
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = unit_priestess_gold
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = unit_priestess_gold
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = unit_priestess_gold
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = unit_priestess_gold
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = unit_priestess_gold
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = unit_priestess_gold
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = unit_priestess_gold
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = unit_priestess_gold
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = unit_vampire_queen
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = unit_vampire_queen
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint1|
+        Templates
+          Item = unit_vampire_queen
       Item = Wait
         Duration = Float||time_m|0
       Item = SpawnTemplateFromList
