@@ -63,7 +63,7 @@
         }
     ],
     "fog": [
-        true,
+        false,
         false
     ]
 }
