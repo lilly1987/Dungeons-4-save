@@ -14,6 +14,14 @@
         Min = 1
         Templates
           Item = hero_priestess_gold
+gimmick_torturechamber_my
+  Include = gimmick_torturechamber
+  PrefabReference
+    ClientPrefab = 9df6402ab1dce2a4eac2f07b42e5fdd8
+gimmick_torturechamber_my2
+  Include = gimmick_torturechamber
+  PrefabReference
+    ClientPrefab = 90b14ec051838044796b292fe06c84e6
 hero_priestess_common2
   Include = hero_priestess_common
   EntityType
@@ -262,6 +270,30 @@ player_playable_my
       Item = res_totem.stage_1
       Item = res_totem.stage_2
       Item = res_totem.stage_3
+plot_protagonist_evil2
+  Include = plot_protagonist_evil
+  VisualRepresentation
+    VisualTemplateOverride = hero_priestess_common
+  UiDataUnit
+    Portrait = 578cfb01ebb89dd44afddc2988aa97af
+  EvilHandPickup
+    OnlyPickableWhenOwned = False
+plot_protagonist_evil3
+  Include = plot_protagonist_evil
+  VisualRepresentation
+    VisualTemplateOverride = hero_priestess_elite
+  UiDataUnit
+    Portrait = 2adae673e0f3f2b479ac5fc933209c99
+  EvilHandPickup
+    OnlyPickableWhenOwned = False
+plot_protagonist_evil4
+  Include = plot_protagonist_evil
+  VisualRepresentation
+    VisualTemplateOverride = hero_priestess_gold
+  UiDataUnit
+    Portrait = 42d4ebb3e979b34419bba87fdd70bab8
+  EvilHandPickup
+    OnlyPickableWhenOwned = False
 s_my_award
   Include = empty_script
   ScriptContainer
@@ -584,6 +616,33 @@ s_my_create_pri
             SpawnedEntitiesVariable = EntityList||tmp|
           Item = Wait
             Duration = Float||time_m|0
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint1|
+            Templates
+              Item = plot_protagonist_evil2
+            SpawnedEntitiesVariable = EntityList||tmp|
+          Item = Wait
+            Duration = Float||time_m|0
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint1|
+            Templates
+              Item = hero_priestess_elite3
+            SpawnedEntitiesVariable = EntityList||tmp|
+          Item = Wait
+            Duration = Float||time_m|0
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint1|
+            Templates
+              Item = plot_protagonist_evil4
+            SpawnedEntitiesVariable = EntityList||tmp|
+          Item = Wait
+            Duration = Float||time_m|0
       Item = ForEach
         LoopVariable = Entity||v_ent|
         Items = EntityList||tmp|
@@ -599,9 +658,107 @@ s_my_create_pri
         Actions
           Item = KillUnit
             Unit = Entity||v_ent|
+      Item = ClearEntityList
+        EntityList = EntityList||tmp|
+      Item = ForLoopAction
+        LoopCounts = Int|||5
+        Actions
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint12|
+            Templates
+              Item = hero_priestess_common2
+            SpawnedEntitiesVariable = EntityList||tmp|
+          Item = Wait
+            Duration = Float||time_m|0
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint12|
+            Templates
+              Item = hero_priestess_elite2
+            SpawnedEntitiesVariable = EntityList||tmp|
+          Item = Wait
+            Duration = Float||time_m|0
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint12|
+            Templates
+              Item = hero_priestess_gold2
+            SpawnedEntitiesVariable = EntityList||tmp|
+          Item = Wait
+            Duration = Float||time_m|0
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint1|
+            Templates
+              Item = hero_priestess_common3
+            SpawnedEntitiesVariable = EntityList||tmp|
+            IsCommentedOut = True
+          Item = Wait
+            Duration = Float||time_m|0
+            IsCommentedOut = True
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint1|
+            Templates
+              Item = hero_priestess_elite3
+            SpawnedEntitiesVariable = EntityList||tmp|
+            IsCommentedOut = True
+          Item = Wait
+            Duration = Float||time_m|0
+            IsCommentedOut = True
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint12|
+            Templates
+              Item = hero_priestess_gold3
+            SpawnedEntitiesVariable = EntityList||tmp|
+          Item = Wait
+            Duration = Float||time_m|0
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint12|
+            Templates
+              Item = plot_protagonist_evil2
+            SpawnedEntitiesVariable = EntityList||tmp|
+          Item = Wait
+            Duration = Float||time_m|0
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint12|
+            Templates
+              Item = hero_priestess_elite3
+            SpawnedEntitiesVariable = EntityList||tmp|
+          Item = Wait
+            Duration = Float||time_m|0
+          Item = SpawnTemplateFromList
+            Amount = Int||v_cnt|5
+            Owner = AIPlayer5
+            Location = Entity||waypoints/waypoint12|
+            Templates
+              Item = plot_protagonist_evil4
+            SpawnedEntitiesVariable = EntityList||tmp|
+          Item = Wait
+            Duration = Float||time_m|0
+      Item = Wait
+        Duration = Float|||3
+      Item = ForEach
+        LoopVariable = Entity||v_ent|
+        Items = EntityList||tmp|
+        Actions
+          Item = KillUnit
+            Unit = Entity||v_ent|
   ScriptVariableContainer
     Variables
-      Item = Int|v_cnt||5
+      Item = Int|v_cnt||2
       Item = Float|v_t||0.125
       Item = EntityList|tmp||
       Item = Entity|v_ent||
@@ -632,12 +789,10 @@ s_my_kill
       Item = OnceAfter
         StartDelay = Float||time_f|3
     Actions
-      Item = KillUnit
-        Unit = Entity||hero_priestess_common4|
-      Item = KillUnit
-        Unit = Entity||hero_priestess_elite4|
-      Item = KillUnit
-        Unit = Entity||hero_priestess_gold4|
+  ScriptVariableContainer
+    Variables
+      Item = EntityList|tmps||
+      Item = Int|tmp||0
 s_my_level_up
   Include = script_skir_hero_level_manager
   ScriptContainer
