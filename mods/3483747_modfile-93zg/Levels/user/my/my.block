@@ -1,4 +1,20 @@
-﻿hero_priestess_common2
+﻿combat_team_my
+  Include = combat_team_base
+  MakeSomeTemplatelistByVariable
+    Entries
+      Item
+        Min = 1
+        Templates
+          Item = hero_priestess_common
+      Item
+        Min = 1
+        Templates
+          Item = hero_priestess_elite
+      Item
+        Min = 1
+        Templates
+          Item = hero_priestess_gold
+hero_priestess_common2
   Include = hero_priestess_common
   EntityType
     Types = Append
@@ -251,7 +267,7 @@ s_my_award
   ScriptContainer
     Triggers
       Item = OnceAfter
-        StartDelay = Float|||10
+        StartDelay = Float||time_f|3
     Actions
       Item = AwardAchievementAction
         Achievement = ach_main04undead_sacrifice
@@ -263,11 +279,10 @@ s_my_builder
         EddynType = eddyntype_builder
     Actions
       Item = ActivateEntity
-        Entity = Entity||spawners/spawner_eddyn_patrol_sandbox_builder|
-      Item = ActivateEntity
         Entity = Entity||spawners/spawner_eddyn_patrol_sandbox_my_builder|
       Item = TryStartOutbuildingBuildMission
         IsCommentedOut = True
+    AfterPlay = Nothing
 s_my_camp
   Include = empty_script
   ScriptContainer
@@ -277,9 +292,31 @@ s_my_camp
       Item = ForLoopAction
         LoopCounts = Int|||10
         Actions
+          Item = IntOperation
+            Destination = Int||x_n|0
+            A = Int||x|0
+            Op = times
+            B = Int||step|0
+          Item = IntOperation
+            A = Int||x_n|0
+            Op = plus
+            B = Int||x_min|0
+            Destination = Int||x_n|0
           Item = ForLoopAction
             LoopCounts = Int|||10
             Actions
+              Item = IntOperation
+                A = Int||y|0
+                Op = times
+                B = Int||step|0
+                Destination = Int||y_n|0
+              Item = IntOperation
+                A = Int||y_n|0
+                B = Int||y_min|0
+                Destination = Int||y_n|0
+              Item = SetPosHeadValue
+                Source = PosHead||ScriptEntity|0 0 0
+                Destination = PosHead||v_pos|0 0 0
               Item = SpawnTemplate
                 Template = spawner_camp_my
                 Owner = AIPlayer5
@@ -288,8 +325,6 @@ s_my_camp
               Item = AddEntityToList
                 Entity = Entity||v_camp|
                 EntityList = EntityList||l_camp|
-              Item
-                IsCommentedOut = 
             LoopVariable = Int||y|0
         LoopVariable = Int||x|0
     Enabled = False
@@ -300,6 +335,13 @@ s_my_camp
       Item = PosHead|v_pos||0 0 0
       Item = Int|x||0
       Item = Int|y||0
+      Item = Int|x_min||3333
+      Item = Int|y_min||333
+      Item = Int|x_max||4044
+      Item = Int|y_max||1044
+      Item = Int|step||71
+      Item = Int|x_n||0
+      Item = Int|y_n||0
 s_my_create
   Include = empty_script
   ScriptContainer
@@ -311,7 +353,7 @@ s_my_create
         Templates
           Item = unit_priestess
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
@@ -319,7 +361,7 @@ s_my_create
         Templates
           Item = unit_priestess_gold
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
@@ -327,7 +369,7 @@ s_my_create
         Templates
           Item = unit_vampire_queen
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
@@ -335,7 +377,7 @@ s_my_create
         Templates
           Item = hero_priestess_common
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
@@ -343,7 +385,7 @@ s_my_create
         Templates
           Item = hero_priestess_elite
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
@@ -351,7 +393,7 @@ s_my_create
         Templates
           Item = hero_priestess_gold
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
@@ -359,7 +401,7 @@ s_my_create
         Templates
           Item = plot_protagonist_evil
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
@@ -367,7 +409,7 @@ s_my_create
         Templates
           Item = unit_pitfiend
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
@@ -380,22 +422,21 @@ s_my_create
         IsCommentedOut = True
     Triggers
       Item = OnceAfter
-        StartDelay = Float|||3
+        StartDelay = Float||time_f|3
   ScriptVariableContainer
     Variables
-      Item = Int|v_cnt||10
-      Item = Float|v_t||0.125
       Item = EntityList|tmp||
       Item = Entity|v_ent||
+      Item = Int|v_cnt||10
 s_my_create_pri
   Include = empty_script
   ScriptContainer
     Triggers
       Item = OnceAfter
-        StartDelay = Float|||5
+        StartDelay = Float||time_f|3
     Actions
       Item = ForLoopAction
-        LoopCounts = Int|||7
+        LoopCounts = Int|||5
         Actions
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
@@ -405,7 +446,7 @@ s_my_create_pri
               Item = hero_priestess_common2
             SpawnedEntitiesVariable = EntityList||tmp|
           Item = Wait
-            Duration = Float||v_t|1
+            Duration = Float||time_m|0
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
@@ -414,7 +455,7 @@ s_my_create_pri
               Item = hero_priestess_elite2
             SpawnedEntitiesVariable = EntityList||tmp|
           Item = Wait
-            Duration = Float||v_t|1
+            Duration = Float||time_m|0
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
@@ -423,7 +464,7 @@ s_my_create_pri
               Item = hero_priestess_gold2
             SpawnedEntitiesVariable = EntityList||tmp|
           Item = Wait
-            Duration = Float||v_t|1
+            Duration = Float||time_m|0
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
@@ -433,7 +474,7 @@ s_my_create_pri
             SpawnedEntitiesVariable = EntityList||tmp|
             IsCommentedOut = True
           Item = Wait
-            Duration = Float||v_t|1
+            Duration = Float||time_m|0
             IsCommentedOut = True
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
@@ -444,7 +485,7 @@ s_my_create_pri
             SpawnedEntitiesVariable = EntityList||tmp|
             IsCommentedOut = True
           Item = Wait
-            Duration = Float||v_t|1
+            Duration = Float||time_m|0
             IsCommentedOut = True
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
@@ -453,10 +494,8 @@ s_my_create_pri
             Templates
               Item = hero_priestess_gold3
             SpawnedEntitiesVariable = EntityList||tmp|
-            IsCommentedOut = True
           Item = Wait
-            Duration = Float||v_t|1
-            IsCommentedOut = True
+            Duration = Float||time_m|0
       Item = ForEach
         LoopVariable = Entity||v_ent|
         Items = EntityList||tmp|
@@ -483,30 +522,27 @@ s_my_evil
   ScriptContainer
     Triggers
       Item = OnceAfter
-        StartDelay = Float|||3
+        StartDelay = Float||time_f|3
     Actions
       Item = UncoverFogOfWar
         Location = Entity||spawners/spawner_eddyn_patrol_sandbox_my|
         Radius = 32
-      Item = UncoverFogOfWar
-        Location = Entity||spawners/spawner_eddyn_patrol_sandbox1|
-        Radius = 32
+        IsCommentedOut = True
       Item = EnableEvilDeedManager
       Item = SetEvilDeedManagerInterval
-        Interval = Int||v_in|0
+        Interval = Int||time_every|0
       Item = TriggerDynamicEvilDeed
         EvilDeedVar = Entity||spawners/spawner_eddyn_patrol|
         IsCommentedOut = True
       Item = TriggerEvilDeedManager
   ScriptVariableContainer
     Variables
-      Item = Float|v_in||60
 s_my_kill
   Include = empty_script
   ScriptContainer
     Triggers
       Item = OnceAfter
-        StartDelay = Float|||3
+        StartDelay = Float||time_f|3
     Actions
       Item = KillUnit
         Unit = Entity||hero_priestess_common4|
@@ -514,12 +550,21 @@ s_my_kill
         Unit = Entity||hero_priestess_elite4|
       Item = KillUnit
         Unit = Entity||hero_priestess_gold4|
+s_my_level_up
+  Include = script_skir_hero_level_manager
+  ScriptContainer
+    Triggers
+      Item = PeriodicTrigger
+        Duration = Float||time_up|0
+        IsCommentedOut = False
+  ScriptVariableContainer
+    Variables
 s_my_money
   Include = empty_script
   ScriptContainer
     Triggers
       Item = OnceAfter
-        StartDelay = Float|||3
+        StartDelay = Float||time_f|3
     Actions
       Item = ForLoopAction
         LoopCounts = Int|||50
@@ -532,7 +577,7 @@ s_my_money
             Duration = Float||v_t|1
             IsCommentedOut = True
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = ForLoopAction
         LoopCounts = Int|||50
         Actions
@@ -541,244 +586,219 @@ s_my_money
             Amount = Int|||20
             Position = Entity||rooms/room_evilvault41|
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = GiveCurrency
         Currency = ToolboxManager
         Amount = Int|||100
         FallbackStoreAnywhere = False
         Position = Entity||rooms/room_workshop|
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = GiveCurrency
         Currency = BatteryManager
         Amount = Int|||100
         Position = Entity||rooms/room_workshop|
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = GiveCurrency
         Currency = BeerManager
         Amount = Int|||100
         Position = Entity||rooms/room_brewery|
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = GiveCurrency
         Currency = FaithManager
         Amount = Int|||100
         Position = Entity||room_throneroom|
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = GiveCurrency
         Currency = GuruManager
         Amount = Int|||100
         Position = Entity||rooms/room_gurufarm|
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = GiveCurrency
         Currency = PotionManager
         Amount = Int|||100
         FallbackStoreAnywhere = False
         Position = Entity||rooms/room_potionlodge|
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
       Item = GiveCurrency
         Currency = ManaManager
         Amount = Int|||1000
         Position = Entity||rooms/room_arcanium|
         FallbackStoreAnywhere = False
       Item = Wait
-        Duration = Float||v_t|1
+        Duration = Float||time_m|0
   ScriptVariableContainer
     Variables
-      Item = Float|v_t||0.125
 s_my_spawn
   Include = empty_script
   ScriptContainer
     Triggers
       Item = PeriodicTrigger
-        Duration = Float||v_every|60
+        Duration = Float||time_every|0
       Item = OnceAfter
-        StartDelay = Float|||3
+        StartDelay = Float||time_f|3
     AfterPlay = Nothing
     Actions
-      Item = FillList
-        List = EntityList||v_spawn|
-        Owner = AIPlayer5
-        Filter
-          Item = EntityListFilterAlive
-          Item = EntityListFilterInRegion
-            Outside = True
-          Item = EntityListFilterEntityType
-            EntityType = type_spawner_pri
-        IsCommentedOut = True
       Item = ForLoopAction
         Actions
           Item = SpawnIfUnrestrictedFromList
             Spawners = EntityList||my_spawner|
-            SpawnedSelectionGroup = EntityList||v_spawn|
+            SpawnedSelectionGroup = EntityList||spawn|
+            UseFirstUnrestrictedSpawner = False
+          Item = AddEntityListToList
+            FromEntityList = EntityList||spawn|
+            ToEntityList = EntityList||spawn_all|
+          Item = ForEach
+            LoopVariable = Entity||tmp|
+            Items = EntityList||spawn|
+            Actions
+              Item = UncoverFogOfWar
+                Location = Entity||tmp|
+                Radius = 2
+                FowVariable = Entity||tmp|
+              Item = RemoveEntityFromList
+                Entity = Entity||tmp|
+                EntityList = EntityList||spawn_t|
+          Item = ClearEntityList
+            EntityList = EntityList||spawn|
+            IsCommentedOut = True
         LoopCounts = Int||spawn_cnt|3
         LoopVariable = Int||loop|0
-      Item = SpawnIfUnrestrictedFromList
-        Spawners = EntityList||my_spawner|
-        IsCommentedOut = True
-      Item = AddEntityListToList
-        FromEntityList = EntityList||v_spawn|
-        ToEntityList = EntityList||g_spawn|
       Item = Comment
         IsCommentedOut = True
         Comment = ""
-      Item = GetFirstEntityInListAction
-        List = EntityList||v_spawn|
-        Variable = Entity||v_spawn_f|
-        IsCommentedOut = True
-      Item = UncoverFogOfWar
-        Location = Entity||v_spawn_f|
-        Radius = 15
-        FowVariable = Entity||v_spawn_f|
-        IsCommentedOut = True
       Item = Log
         Text = ""
         IsCommentedOut = True
   ScriptVariableContainer
     Variables
-      Item = Int|v_every||60
-      Item = EntityList|v_spawn||
-      Item = Entity|v_spawn_f||
+      Item = EntityList|spawn||
+      Item = Entity|tmp||
       Item = Int|loop||0
-s_my_spawn_hero_priestess
+s_my_spawn_af
   Include = empty_script
   ScriptContainer
-    Actions
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = AIPlayer5
-        Location = Entity||waypoints/waypoint1|
-        Templates
-          Item = hero_priestess_gold3
-        SpawnedEntitiesVariable = EntityList||v_created|
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = AIPlayer5
-        Location = Entity||waypoints/waypoint1|
-        Templates
-          Item = hero_priestess_elite3
-        SpawnedEntitiesVariable = EntityList||v_created|
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|0
-        Owner = AIPlayer5
-        Location = Entity||waypoints/waypoint1|
-        Templates
-          Item = hero_priestess_common3
-        SpawnedEntitiesVariable = EntityList||v_created|
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = AIPlayer5
-        Location = Entity||waypoints/waypoint1|
-        Templates
-          Item = hero_priestess_gold2
-        SpawnedEntitiesVariable = EntityList||v_created|
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = AIPlayer5
-        Location = Entity||waypoints/waypoint1|
-        Templates
-          Item = hero_priestess_elite2
-        SpawnedEntitiesVariable = EntityList||v_created|
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|0
-        Owner = AIPlayer5
-        Location = Entity||waypoints/waypoint1|
-        Templates
-          Item = hero_priestess_common2
-        SpawnedEntitiesVariable = EntityList||v_created|
-      Item = Wait
-        Duration = Float|||1
-      Item = ForEach
-        Items = EntityList||v_created|
-        Actions
-          Item = KillUnit
-            Unit = Entity||v_ent|
-            IsCommentedOut = True
-          Item = SetUnitHealth
-            Unit = Entity||v_ent|
-            Value = Float|||0.01
-        LoopVariable = Entity||v_ent|
-      Item = Wait
-        Duration = Float|||1
-      Item = ForEach
-        LoopVariable = Entity||v_ent|
-        Items = EntityList||v_created|
-        Actions
-          Item = KillUnit
-            Unit = Entity||v_ent|
-      Item = Wait
-        Duration = Float|||1
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = AIPlayer5
-        Location = Entity||entrances/entrance|
-        Templates
-          Item = hero_priestess_gold2
-        SpawnedEntitiesVariable = EntityList||v_created|
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = AIPlayer5
-        Location = Entity||entrances/entrance|
-        Templates
-          Item = hero_priestess_elite2
-        SpawnedEntitiesVariable = EntityList||v_created|
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|0
-        Owner = AIPlayer5
-        Location = Entity||entrances/entrance|
-        Templates
-          Item = hero_priestess_common2
-        SpawnedEntitiesVariable = EntityList||v_created|
-      Item = GiveOrderToSelectionGroup
-        SelectionGroup = EntityList||v_created|
-        Order = MoveAttackOrder
-          Target = Entity||room_throneroom|
+    AfterPlay = Nothing
     Triggers
       Item = PeriodicTrigger
-        Duration = Float||v_every|60
-      Item = OnceAfter
-        StartDelay = Float|||3
-    AfterPlay = Nothing
+        Duration = Float|||1
+    Conditions
+    Actions
+      Item = ForEach
+        LoopVariable = Entity||tmp|
+        Items = EntityList||spawn_t|
+        Actions
+          Item = UncoverFogOfWar
+            Location = Entity||tmp|
+            FowVariable = Entity||tmp|
+            Radius = 2
+          Item = RemoveEntityFromList
+            Entity = Entity||tmp|
+            EntityList = EntityList||spawn_t|
+      Item = ClearEntityList
+        EntityList = EntityList||spawn_t|
+        IsCommentedOut = True
   ScriptVariableContainer
     Variables
-      Item = Int|v_cnt||2
-      Item = Int|v_every||60
-      Item = Entity|v_ent||
-      Item = EntityList|v_created||
+      Item = Entity|tmp||
+s_my_spawn_up
+  Include = empty_script
+  ScriptVariableContainer
+    Variables
+  ScriptContainer
+    AfterPlay = Nothing
+    Triggers
+      Item = PeriodicTrigger
+        Duration = Float||time_up|0
+    Actions
+      Item = IfThenElse
+        Conditions
+          Item = CompareInt
+            A = Int||spawn_cnt|0
+            Op = less
+            B = Int||spawn_max|0
+        ThenActions
+          Item = IntOperation
+            A = Int||spawn_cnt|0
+            B = Int|||1
+            Destination = Int||spawn_cnt|0
+        ElseActions
+          Item = EnableScript
+            Script = Entity||scripts/s_my_spawn_up|
+            Enabled = False
+    Conditions
 s_my_uncover
   Include = empty_script
   ScriptContainer
     Actions
       Item = UncoverAllies
+      Item = FillList
+        List = EntityList||tmps|
+        Owner = AIPlayer5
+        Filter
+          Item = EntityListFilterEntityType
+            EntityType = type_spawner
+      Item = ForEach
+        LoopVariable = Entity||tmp|
+        Items = EntityList||tmps|
+        Actions
+          Item = UncoverFogOfWar
+            Location = Entity||tmp|
+            Radius = 8
+            FowVariable = Entity||tmp|
     Triggers
       Item = OnceAfter
+        StartDelay = Float||time_f|3
+  ScriptVariableContainer
+    Variables
+      Item = EntityList|tmps||
+      Item = Entity|tmp||
 spawner_camp_my
   Include = spawner_camp
   RemovedComponent = MakeSomeCombatTeam
+  RemovedComponent = FogOfWarHide
   MakeSomeTemplatelist
     Templates
       Item = hero_priestess_common
       Item = hero_priestess_elite
       Item = hero_priestess_gold
+  MakeThenStoreInVariable
+    CombatTeamVariable = EntityList||spawn_t|
+    RaidVariable = EntityList||spawn_r|
+spawner_edboss_all_my
+  Include = spawner_edboss_all
+  MakeRegularly
+    Interval = 300
 spawner_eddyn_builder_sandbox_my
   Include = spawner_eddyn_builder_sandbox
-  MakeSomeCombatTeam
-    Tags = Append
-      Item = HeroesWest
+  RemovedComponent = MakeSomeCombatTeam
   EvilDeedDynamic
     Evilness = 666
+  MakeSomeTemplatelist
+    Templates
+      Item = hero_priestess_common
+      Item = hero_priestess_elite
+      Item = hero_priestess_gold
+      Item = eddyn_construction_vehicle
 spawner_eddyn_patrol_sandbox_my
   Include = spawner_eddyn_patrol_sandbox
+  RemovedComponent = MakeSomeCombatTeam
   EvilDeedDynamic
     Countdown = 60
     Evilness = 666
-  MakeSomeCombatTeam
-    Tags = Append
-      Item = HeroesWest
+  MakeSomeTemplatelist
+    Templates
+      Item = hero_priestess_common
+      Item = hero_priestess_elite
+      Item = hero_priestess_gold
+  MakeThenStoreInVariable
+    CombatTeamVariable = EntityList||spawn_t|
+    RaidVariable = EntityList||spawn_r|
 type_spawner_pri
   Include = type_base
 world_my
@@ -855,10 +875,19 @@ world_my
     MapDescription = dlg_skir03wave_mission_desc
   ScriptVariableContainer
     Variables
-      Item = EntityList|g_spawn||
-      Item = EntityList|g_t_spawn||
-      Item = EntityList|g_r_spawn||
+      Item = EntityList|spawn_all||
+      Item = EntityList|spawn_t||
+      Item = EntityList|spawn_r||
       Item = Int|spawn_cnt||3
+      Item = Int|spawn_max||10
+      Item = Float|time_up||300
+      Item = Float|time_every||60
+      Item = Float|time_f||3
+      Item = Float|time_m||0.125
+      Item = Int|un||1
+      Item = Formula|f||
+      Item = EntityTemplate|t||
+      Item = String|s||
   EvilDeedManager
     TypeLimits
       Item
