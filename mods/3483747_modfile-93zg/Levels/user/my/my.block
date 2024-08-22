@@ -600,24 +600,30 @@ s_my_create
         Location = PosHead||loc|0 0 0
         Templates
           Item = unit_priestess_gold
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
         Location = PosHead||loc|0 0 0
         Templates
           Item = unit_priestess_gold
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
         Location = PosHead||loc|0 0 0
         Templates
           Item = unit_priestess_gold
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
@@ -888,6 +894,8 @@ s_my_create_pri
         Templates
           Item = plot_protagonist_evil4
         SpawnedEntitiesVariable = EntityList||prt_ents|
+      Item = Wait
+        Duration = Float||time_m|0
       Item = SpawnTemplateFromList
         Amount = Int||pri_cnt|0
         Owner = AIPlayer5
@@ -895,6 +903,8 @@ s_my_create_pri
         Templates
           Item = plot_protagonist_evil3
         SpawnedEntitiesVariable = EntityList||prt_ents|
+      Item = Wait
+        Duration = Float||time_m|0
       Item = SpawnTemplateFromList
         Amount = Int||pri_cnt|0
         Owner = AIPlayer5
@@ -902,6 +912,8 @@ s_my_create_pri
         Templates
           Item = plot_protagonist_evil2
         SpawnedEntitiesVariable = EntityList||prt_ents|
+      Item = Wait
+        Duration = Float||time_m|0
       Item = Comment
         IsCommentedOut = True
         Comment = ""
@@ -912,6 +924,10 @@ s_my_create_pri
         Templates
           Item = hero_priestess_common2
         SpawnedEntitiesVariable = EntityList||prt_ents|
+        IsCommentedOut = True
+      Item = Wait
+        Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||pri_cnt|0
         Owner = AIPlayer5
@@ -919,6 +935,10 @@ s_my_create_pri
         Templates
           Item = hero_priestess_elite2
         SpawnedEntitiesVariable = EntityList||prt_ents|
+        IsCommentedOut = True
+      Item = Wait
+        Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||pri_cnt|0
         Owner = AIPlayer5
@@ -926,6 +946,10 @@ s_my_create_pri
         Templates
           Item = hero_priestess_gold2
         SpawnedEntitiesVariable = EntityList||prt_ents|
+        IsCommentedOut = True
+      Item = Wait
+        Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = Comment
         IsCommentedOut = True
         Comment = ""
@@ -978,16 +1002,21 @@ s_my_dig
         IsCommentedOut = True
       Item = DigRoom
         RoomTemplate = room_treasury
-        StartTile = Entity||rooms/room_treasury1|
+        StartTile = Entity||tile_area_marker|
+        RoomTileCount = 100
       Item = Wait
         Duration = Float|||3
+        IsCommentedOut = True
       Item = MarkTileForDigging
         Player = SinglePlayer
         Tile = Entity||tile_area_marker|
+        IsCommentedOut = True
       Item = Wait
         Duration = Float|||3
+        IsCommentedOut = True
       Item = DigTileAction
         TileArea = Entity||tile_area_marker|
+        IsCommentedOut = True
     Enabled = True
   ScriptVariableContainer
     Variables
