@@ -282,6 +282,61 @@ player_playable_my
       Item = res_totem.stage_1
       Item = res_totem.stage_2
       Item = res_totem.stage_3
+      Item = res_arena.stage_1
+      Item = res_arena.stage_2
+      Item = res_arena.stage_3
+      Item = res_arena.stage_4
+      Item = res_vortex.stage_1
+      Item = res_vortex.stage_2
+      Item = res_vortex.stage_3
+      Item = res_vortex.stage_4
+      Item = res_vortex.stage_5
+      Item = res_vortex.stage_6
+  BatteryManager
+    GlobalCapacity = 100
+    GlobalCurrent = 100
+    WorkerCarryCapacity = 100
+    CarryMax = 100
+  BeerManager
+    WorkerCarryCapacity = 100
+    GlobalCapacity = 100
+    GlobalCurrent = 100
+  EvilnessManager
+    WorkerCarryCapacity = 10000
+    GlobalCapacity = 100000
+    GlobalCurrent = 100000
+    WorkerTileCleanupCapacity = 100
+  FaithManager
+    WorkerCarryCapacity = 100
+    GlobalCapacity = 100
+    GlobalCurrent = 100
+  GoldManager
+    WorkerTileCleanupCapacity = 100
+    FloorCapacity = 10000
+    WorkerCarryCapacity = 10000
+    GlobalCapacity = 100000
+    GlobalCurrent = 100000
+  GuruManager
+    WorkerCarryCapacity = 100
+    GlobalCapacity = 100
+    GlobalCurrent = 100
+  ManaManager
+    WorkerTileCleanupCapacity = 100
+    WorkerCarryCapacity = 1000
+    GlobalCapacity = 100000
+    GlobalCurrent = 100000
+  PotionManager
+    GlobalCapacity = 100
+    GlobalCurrent = 100
+    CarryMax = 100
+    WorkerCarryCapacity = 100
+  ToolboxManager
+    WorkerCarryCapacity = 100
+    GlobalCapacity = 100
+    GlobalCurrent = 100
+  ThroneRoomSpawner
+    WorkerRespawnTime = 1
+    MaxWorker = 24
 plot_protagonist_evil2
   Include = plot_protagonist_evil
   VisualRepresentation
@@ -314,7 +369,145 @@ s_my_award
         StartDelay = Float||time_f|3
     Actions
       Item = AwardAchievementAction
-        Achievement = ach_main04undead_sacrifice
+        Achievement = ach_main01begin_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main01begin_die
+      Item = AwardAchievementAction
+        Achievement = ach_main02horde_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main03demon_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main04undead_completed
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_skill_tentacle
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_skill_callback
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_skill_storm
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_thalya_xp
+      Item = AwardAchievementAction
+        Achievement = ach_main05evil_completed
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_thalya_skill_cost
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_demons_research
+      Item = AwardAchievementAction
+        Achievement = ach_main06transporter_transport
+      Item = AwardAchievementAction
+        Achievement = ach_main06transporter_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main07storm_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main07storm_storm
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_horde_research
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_undead_minions
+      Item = AwardAchievementAction
+        Achievement = ach_main08sacrifice_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main08sacrifice_gorguattack
+      Item = AwardAchievementAction
+        Achievement = ach_main09journey_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main09journey_nospells
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_general_traps_and_doors
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_skill_gorgu
+      Item = AwardAchievementAction
+        Achievement = ach_main10fire_completed
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_horde_xp
+      Item = AwardAchievementAction
+        Achievement = ach_main11blessing_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main11blessing_undeadonly
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_undead_research
+      Item = AwardAchievementAction
+        Achievement = ach_main12race_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main12race_tanosevilness
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_demons_damage_evilness
+      Item = AwardAchievementAction
+        Achievement = ach_main13tanos_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main13tanos_dungeonlord
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_general_research
+      Item = AwardAchievementAction
+        Achievement = ach_main14run_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main14run_roomdamage
+      Item = AwardAchievementAction
+        Achievement = ach_main14run_mirroruses
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_general_snots
+      Item = AwardAchievementAction
+        Achievement = ach_main15drill_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main15drill_untouchable
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_general_payday_guru
+      Item = AwardAchievementAction
+        Achievement = ach_main16ring_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main16ring_spawners
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_thalya_health
+      Item = AwardAchievementAction
+        Achievement = ach_main17stone_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main17stone_transporter
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_thalya_damage
+      Item = AwardAchievementAction
+        Achievement = ach_main19war_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main19war_stonedamage
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_general_evil_traps
+      Item = AwardAchievementAction
+        Achievement = ach_main20end_completed
+      Item = AwardAchievementAction
+        Achievement = ach_main20end_notristan
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_general_damage
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_speed
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_heroes
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_slap_guru
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_demons_revive_resource
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_thalya_glass_canon
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_thalya_canonier
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_demons_revive_resource
+      Item = AwardFauxAchievementAction
+        Achievement = ach_western01flee_completed
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_western_automatic_refill
+      Item = AwardFauxAchievementAction
+        Achievement = ach_western02rescue_completed
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_western_kill_gold
+      Item = AwardFauxAchievementAction
+        Achievement = ach_western03bounty_completed
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_western_battery
+      Item = AwardFauxAchievementAction
+        Achievement = ach_western04escort_completed
+      Item = UnlockEvilPerkAction
+        Perk = EntityTemplate|||evilperk_western_improved_gold_veins
+      Item = AwardFauxAchievementAction
+        Achievement = ach_western04escort_obstruction
 s_my_builder
   Include = empty_script
   ScriptContainer
@@ -404,10 +597,24 @@ s_my_create
         Location = Entity||waypoints/waypoint_m|
         Templates
           Item = unit_priestess_gold
-        IsCommentedOut = True
       Item = Wait
         Duration = Float||time_m|0
-        IsCommentedOut = True
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint_m|
+        Templates
+          Item = unit_priestess_gold
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint_m|
+        Templates
+          Item = unit_priestess_gold
+      Item = Wait
+        Duration = Float||time_m|0
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
@@ -468,58 +675,6 @@ s_my_create
       Item = Wait
         Duration = Float||time_m|0
         IsCommentedOut = True
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint_m|
-        Templates
-          Item = unit_priestess_gold
-        IsCommentedOut = True
-      Item = Wait
-        Duration = Float||time_m|0
-        IsCommentedOut = True
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint_m|
-        Templates
-          Item = unit_priestess_gold
-        IsCommentedOut = True
-      Item = Wait
-        Duration = Float||time_m|0
-        IsCommentedOut = True
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = SinglePlayer
-        Location = Entity||entrances/entrance_outside|
-        Templates
-          Item = unit_vampire_queen
-      Item = Wait
-        Duration = Float||time_m|0
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = SinglePlayer
-        Location = Entity||entrances/entrance_outside|
-        Templates
-          Item = unit_vampire_queen
-      Item = Wait
-        Duration = Float||time_m|0
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = SinglePlayer
-        Location = Entity||entrances/entrance_outside|
-        Templates
-          Item = unit_vampire_queen
-      Item = Wait
-        Duration = Float||time_m|0
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = SinglePlayer
-        Location = Entity||entrances/entrance_outside|
-        Templates
-          Item = unit_vampire_queen
-      Item = Wait
-        Duration = Float||time_m|0
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
@@ -555,17 +710,9 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||entrances/entrance_outside|
-        Templates
-          Item = plot_protagonist_evil
-      Item = Wait
-        Duration = Float||time_m|0
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = SinglePlayer
         Location = Entity||waypoints/waypoint_m|
         Templates
-          Item = unit_pitfiend
+          Item = unit_pitfiend_my
       Item = Wait
         Duration = Float||time_m|0
       Item = SpawnTemplateFromList
@@ -581,6 +728,76 @@ s_my_create
     Triggers
       Item = OnceAfter
         StartDelay = Float||time_f|3
+  ScriptVariableContainer
+    Variables
+      Item = EntityList|tmp||
+      Item = Entity|v_ent||
+      Item = Int|v_cnt||10
+s_my_create_o
+  Include = empty_script
+  ScriptContainer
+    Triggers
+      Item = OnceAfter
+        StartDelay = Float||time_f|3
+    Actions
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||entrances/entrance_outside|
+        Templates
+          Item = unit_vampire_queen
+        SpawnedEntitiesVariable = EntityList||tmp|
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||entrances/entrance_outside|
+        Templates
+          Item = unit_vampire_queen
+        SpawnedEntitiesVariable = EntityList||tmp|
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||entrances/entrance_outside|
+        Templates
+          Item = unit_succubus
+        SpawnedEntitiesVariable = EntityList||tmp|
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||entrances/entrance_outside|
+        Templates
+          Item = unit_succubus
+        SpawnedEntitiesVariable = EntityList||tmp|
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||entrances/entrance_outside|
+        Templates
+          Item = plot_protagonist_evil
+        SpawnedEntitiesVariable = EntityList||tmp|
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||entrances/entrance_outside|
+        Templates
+          Item = unit_pitfiend_my
+        SpawnedEntitiesVariable = EntityList||tmp|
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = GiveOrderToSelectionGroup
+        SelectionGroup = EntityList||tmp|
+        Order = MoveAttackOrder
+          Target = Entity||spawners/spawner_eddyn_patrol_sandbox_my_builder|
   ScriptVariableContainer
     Variables
       Item = EntityList|tmp||
@@ -797,9 +1014,34 @@ s_my_create_pri
   ScriptVariableContainer
     Variables
       Item = Int|v_cnt||2
-      Item = Float|v_t||0.125
       Item = EntityList|tmp||
       Item = Entity|v_ent||
+s_my_dig
+  Include = empty_script
+  ScriptContainer
+    Triggers
+      Item = OnceAfter
+        StartDelay = Float||time_f|3
+    Actions
+      Item = DigCorridor
+        Start = Entity||tile_area_marker|
+        End = Entity||tile_area_marker|
+        IsCommentedOut = True
+      Item = DigRoom
+        IsCommentedOut = True
+      Item = DigSingleTile
+        IsCommentedOut = True
+      Item = MarkTileForDigging
+        Player = SinglePlayer
+        Tile = Entity||tile_area_marker|
+      Item = DigTileAction
+        TileArea = Entity||tile_area_marker|
+        IsCommentedOut = True
+    Enabled = False
+  ScriptVariableContainer
+    Variables
+      Item = EntityList|tmps||
+      Item = Int|tmp||0
 s_my_evil
   Include = empty_script
   ScriptContainer
@@ -913,6 +1155,7 @@ s_my_money
         FallbackStoreAnywhere = False
       Item = Wait
         Duration = Float||time_m|0
+    Enabled = False
   ScriptVariableContainer
     Variables
 s_my_spawn
@@ -945,6 +1188,7 @@ s_my_spawn
               Item = RemoveEntityFromList
                 Entity = Entity||tmp|
                 EntityList = EntityList||spawn_t|
+            IsCommentedOut = True
           Item = ClearEntityList
             EntityList = EntityList||spawn|
             IsCommentedOut = True
@@ -984,6 +1228,7 @@ s_my_spawn_af
       Item = ClearEntityList
         EntityList = EntityList||spawn_t|
         IsCommentedOut = True
+    Enabled = False
   ScriptVariableContainer
     Variables
       Item = Entity|tmp||
@@ -1028,13 +1273,18 @@ s_my_uncover
   Include = empty_script
   ScriptContainer
     Actions
+      Item = UncoverFogOfWar
+        Location = Entity||waypoints/waypoint_c|
+        Radius = 525
       Item = UncoverAllies
+        IsCommentedOut = True
       Item = FillList
         List = EntityList||tmps|
         Owner = AIPlayer5
         Filter
           Item = EntityListFilterEntityType
             EntityType = type_spawner
+        IsCommentedOut = True
       Item = ForEach
         LoopVariable = Entity||tmp|
         Items = EntityList||tmps|
@@ -1043,6 +1293,7 @@ s_my_uncover
             Location = Entity||tmp|
             Radius = 8
             FowVariable = Entity||tmp|
+        IsCommentedOut = True
     Triggers
       Item = OnceAfter
         StartDelay = Float||time_f|3
@@ -1050,6 +1301,16 @@ s_my_uncover
     Variables
       Item = EntityList|tmps||
       Item = Entity|tmp||
+s_my_win
+  Include = empty_script
+  ScriptContainer
+    Triggers
+      Item = OnceAfter
+        StartDelay = Float||time_f|3
+    Actions
+      Item = GameOver
+        ExtroScript = Entity||scripts/s_my_award|
+    Enabled = False
 spawner_camp_my
   Include = spawner_camp
   RemovedComponent = MakeSomeCombatTeam
@@ -1169,6 +1430,8 @@ trap_trigger_slimeball_my
     NormalRebuildDelay = 1
 type_spawner_pri
   Include = type_base
+unit_pitfiend_my
+  Include = unit_pitfiend
 world_my
   Include = world
   SceneDescription
