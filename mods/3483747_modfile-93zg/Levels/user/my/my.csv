@@ -22,7 +22,16 @@
 /eddyn_waypoint4,eddyn_waypoint,663c4de85156219a,3521,0,522.985,0,180,0,0,0,0,accessibleByScript
 /entrances/entrance,entrance,4249daa771a86b4a,580.5,0,322.5,0,0,0,0,0,0,accessibleByScript;TileArea.Tiles=141 93#141 94#141 95#141 96#141 97#141 98#141 99#142 93#142 94#142 95#142 96#142 97#142 98#142 99#143 93#143 94#143 95#143 96#143 97#143 98#143 99#144 93#144 94#144 95#144 96#144 97#144 98#144 99#145 93#145 94#145 95#145 96#145 97#145 98#145 99#146 93#146 94#146 95#146 96#146 97#146 98#146 99#147 93#147 94#147 95#147 96#147 97#147 98#147 99#190 104#190 105#190 106#190 107#190 108#190 109#190 110#191 104#191 105#191 106#191 107#191 108#191 109#191 110#192 104#192 105#192 106#192 107#192 108#192 109#192 110#193 104#193 105#193 106#193 107#193 108#193 109#193 110#194 104#194 105#194 106#194 107#194 108#194 109#194 110#195 104#195 105#195 106#195 107#195 108#195 109#195 110#196 104#196 105#196 106#196 107#196 108#196 109#196 110;Teleport.Target=Entity||entrances/entrance_outside|
 /entrances/entrance_outside,entrance_outside,7980ef1f2cc2c181,3397.714,0,394.126,0,40.91,0,0,0,0,accessibleByScript;Teleport.Target=Entity||entrances/entrance|
+/gimmick_arcanium,gimmick_arcanium,26676878180b9a4a,658.5,0,721.5,0,180,0,0,0,0,owner=SinglePlayer
+/gimmick_arcanium,gimmick_arcanium,2dcb370720054156,652.5,0,703.5,0,180,0,0,0,0,owner=SinglePlayer
+/gimmick_arcanium,gimmick_arcanium,2e5e25f81876b4a3,652.5,0,715.5,0,180,0,0,0,0,owner=SinglePlayer
+/gimmick_arcanium,gimmick_arcanium,54b47bc9733f461d,652.5,0,709.5,0,180,0,0,0,0,owner=SinglePlayer
+/gimmick_arcanium,gimmick_arcanium,597ab4447bf041ff,658.5,0,715.5,0,180,0,0,0,0,owner=SinglePlayer
+/gimmick_arcanium,gimmick_arcanium,5987a1824dad6c49,658.5,0,709.5,0,180,0,0,0,0,owner=SinglePlayer
+/gimmick_arcanium,gimmick_arcanium,5f107f28025193bb,646.5,0,709.5,0,180,0,0,0,0,owner=SinglePlayer
+/gimmick_arcanium,gimmick_arcanium,726ed2f72cfbddca,646.5,0,703.5,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_arcanium,gimmick_arcanium,7d12c08a1701459a,658.5,0,703.5,0,180,0,0,0,0,owner=SinglePlayer
+/gimmick_arcanium,gimmick_arcanium,82941ac5aa97186,640.5,0,703.5,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_arena,gimmick_arena,101150a130a06607,733.576,0,604.291,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_arena,gimmick_arena,1125c52400b205b8,752.196,0,631.419,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_arena,gimmick_arena,124c994d4f670b26,742.576,0,604.291,0,180,0,0,0,0,owner=SinglePlayer
@@ -59,7 +68,7 @@
 /gimmick_arena,gimmick_arena,da9044a0df2200a,751.576,0,604.291,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_arena,gimmick_arena,db25505284d680a,751.576,0,613.291,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_arena,gimmick_arena,f5bce772285b3a5,724.576,0,613.291,0,180,0,0,0,0,owner=SinglePlayer
-/gimmick_brewery,gimmick_brewery,7e1871c51dd5224,673.5,0,739.5,0,180,0,0,0,0,owner=SinglePlayer
+/gimmick_brewery,gimmick_brewery,7e1871c51dd5224,670.5,0,736.5,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_crypta,gimmick_crypta,1148be3228b63f29,670.365,0,645.94,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_crypta,gimmick_crypta,122706c4691c8ae0,683.315,0,619.679,0,180,0,0,0,0,owner=SinglePlayer
 /gimmick_crypta,gimmick_crypta,12d7fb9f38159519,671.315,0,613.679,0,180,0,0,0,0,owner=SinglePlayer
