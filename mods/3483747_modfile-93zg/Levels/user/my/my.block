@@ -1068,6 +1068,7 @@ spawner_camp_my
       Item = EntityList|spawn_d||
       Item = Int|cnt||0
       Item = String|cnt_s||
+      Item = Entity|tmp||
   ScriptContainer
     AfterPlay = Nothing
     Triggers
@@ -1077,11 +1078,33 @@ spawner_camp_my
       Item = CountEntitiesInList
         EntityList = EntityList||spawn_c|
         Count = Int||cnt|0
+        IsCommentedOut = True
       Item = IntToString
         Value = Int||cnt|0
         Target = String||cnt_s|
+        IsCommentedOut = True
       Item = Log
         Text = ""
+        IsCommentedOut = True
+      Item = ForEach
+        LoopVariable = Entity||tmp|
+        Items = EntityList||spawn_c|
+        Actions
+          Item = UncoverFogOfWar
+            Location = Entity||tmp|
+            Radius = 2
+            FowVariable = Entity||tmp|
+  MakeOnDamageThresholds
+    DamageThresholdsPercent
+      Item = 0
+      Item = 12
+      Item = 25
+      Item = 37
+      Item = 50
+      Item = 62
+      Item = 75
+      Item = 87
+      Item = 100
 spawner_edboss_all_my
   Include = spawner_edboss_all
   MakeRegularly
