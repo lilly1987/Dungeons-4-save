@@ -22,6 +22,18 @@ gimmick_torturechamber_my2
   Include = gimmick_torturechamber
   PrefabReference
     ClientPrefab = 90b14ec051838044796b292fe06c84e6
+  Combat
+    MaxHealth = 7500
+  Gimmick
+    Cost
+      CostEntries
+        Item
+          Value = 1
+          ValueFactors
+          CurrencyManager = GoldManager
+      Time = 1
+  RebuildWhenKilled
+    NormalRebuildDelay = 1
 hero_priestess_common2
   Include = hero_priestess_common
   EntityType
@@ -381,7 +393,7 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = unit_priestess_gold
       Item = Wait
@@ -389,79 +401,97 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = unit_priestess_gold
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = unit_priestess_gold
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = unit_priestess_gold
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = unit_priestess_gold
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = unit_priestess_gold
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = unit_priestess_gold
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = unit_priestess_gold
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = unit_priestess_gold
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = unit_priestess_gold
+        IsCommentedOut = True
       Item = Wait
         Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||entrances/entrance_outside|
         Templates
           Item = unit_vampire_queen
       Item = Wait
@@ -469,7 +499,7 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||entrances/entrance_outside|
         Templates
           Item = unit_vampire_queen
       Item = Wait
@@ -477,7 +507,7 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||entrances/entrance_outside|
         Templates
           Item = unit_vampire_queen
       Item = Wait
@@ -485,7 +515,7 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||entrances/entrance_outside|
         Templates
           Item = unit_vampire_queen
       Item = Wait
@@ -493,7 +523,7 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = hero_priestess_common
       Item = Wait
@@ -501,7 +531,7 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = hero_priestess_elite
       Item = Wait
@@ -509,7 +539,7 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = hero_priestess_gold
       Item = Wait
@@ -517,7 +547,7 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = plot_protagonist_evil
       Item = Wait
@@ -525,7 +555,15 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||entrances/entrance_outside|
+        Templates
+          Item = plot_protagonist_evil
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = unit_pitfiend
       Item = Wait
@@ -533,7 +571,7 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint1|
+        Location = Entity||waypoints/waypoint_m|
         Templates
           Item = hero_priestess_gold3
         IsCommentedOut = True
@@ -561,7 +599,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint1|
+            Location = Entity||waypoints/waypoint_e|
             Templates
               Item = hero_priestess_common2
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -570,7 +608,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint1|
+            Location = Entity||waypoints/waypoint_e|
             Templates
               Item = hero_priestess_elite2
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -579,7 +617,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint1|
+            Location = Entity||waypoints/waypoint_e|
             Templates
               Item = hero_priestess_gold2
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -588,7 +626,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint1|
+            Location = Entity||waypoints/waypoint_m|
             Templates
               Item = hero_priestess_common3
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -599,7 +637,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint1|
+            Location = Entity||waypoints/waypoint_m|
             Templates
               Item = hero_priestess_elite3
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -610,7 +648,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint1|
+            Location = Entity||waypoints/waypoint_e|
             Templates
               Item = hero_priestess_gold3
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -619,7 +657,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint1|
+            Location = Entity||waypoints/waypoint_e|
             Templates
               Item = plot_protagonist_evil2
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -628,7 +666,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint1|
+            Location = Entity||waypoints/waypoint_e|
             Templates
               Item = hero_priestess_elite3
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -637,7 +675,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint1|
+            Location = Entity||waypoints/waypoint_e|
             Templates
               Item = plot_protagonist_evil4
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -666,7 +704,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint12|
+            Location = Entity||waypoints/waypoint_e2|
             Templates
               Item = hero_priestess_common2
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -675,7 +713,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint12|
+            Location = Entity||waypoints/waypoint_e2|
             Templates
               Item = hero_priestess_elite2
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -684,7 +722,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint12|
+            Location = Entity||waypoints/waypoint_e2|
             Templates
               Item = hero_priestess_gold2
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -693,7 +731,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint1|
+            Location = Entity||waypoints/waypoint_m|
             Templates
               Item = hero_priestess_common3
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -704,7 +742,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint1|
+            Location = Entity||waypoints/waypoint_m|
             Templates
               Item = hero_priestess_elite3
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -715,7 +753,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint12|
+            Location = Entity||waypoints/waypoint_e2|
             Templates
               Item = hero_priestess_gold3
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -724,7 +762,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint12|
+            Location = Entity||waypoints/waypoint_e2|
             Templates
               Item = plot_protagonist_evil2
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -733,7 +771,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint12|
+            Location = Entity||waypoints/waypoint_e2|
             Templates
               Item = hero_priestess_elite3
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -742,7 +780,7 @@ s_my_create_pri
           Item = SpawnTemplateFromList
             Amount = Int||v_cnt|5
             Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint12|
+            Location = Entity||waypoints/waypoint_e2|
             Templates
               Item = plot_protagonist_evil4
             SpawnedEntitiesVariable = EntityList||tmp|
@@ -975,6 +1013,17 @@ s_my_spawn_up
             Script = Entity||scripts/s_my_spawn_up|
             Enabled = False
     Conditions
+s_my_test
+  Include = empty_script
+  ScriptContainer
+    Triggers
+      Item = OnceAfter
+    Actions
+      Item = GiveOrderToUnit
+        Unit = Entity||hero_priestess_gold_t|
+        Order = MoveOrder
+          Target = Entity||room_throneroom|
+    Enabled = False
 s_my_uncover
   Include = empty_script
   ScriptContainer
@@ -1011,12 +1060,33 @@ spawner_camp_my
       Item = hero_priestess_elite
       Item = hero_priestess_gold
   MakeThenStoreInVariable
-    CombatTeamVariable = EntityList||spawn_t|
-    RaidVariable = EntityList||spawn_r|
+    CombatTeamVariable = EntityList||spawn_c|
+    RaidVariable = EntityList||spawn_d|
+  ScriptVariableContainer
+    Variables
+      Item = EntityList|spawn_c||
+      Item = EntityList|spawn_d||
+      Item = Int|cnt||0
+      Item = String|cnt_s||
+  ScriptContainer
+    AfterPlay = Nothing
+    Triggers
+      Item = SpawnerTrigger
+        Spawner = Entity||ScriptEntity|
+    Actions
+      Item = CountEntitiesInList
+        EntityList = EntityList||spawn_c|
+        Count = Int||cnt|0
+      Item = IntToString
+        Value = Int||cnt|0
+        Target = String||cnt_s|
+      Item = Log
+        Text = ""
 spawner_edboss_all_my
   Include = spawner_edboss_all
   MakeRegularly
     Interval = 300
+    FirstSpawnInterval = 0
 spawner_eddyn_builder_sandbox_my
   Include = spawner_eddyn_builder_sandbox
   RemovedComponent = MakeSomeCombatTeam
@@ -1042,6 +1112,38 @@ spawner_eddyn_patrol_sandbox_my
   MakeThenStoreInVariable
     CombatTeamVariable = EntityList||spawn_t|
     RaidVariable = EntityList||spawn_r|
+trap_simple_thresher_my
+  Include = trap_simple_thresher
+  DimensionRequirement
+    X = 1
+    Y = 1
+  Gimmick
+    Cost
+      CostEntries
+      Time = 1
+  RebuildWhenKilled
+    NormalRebuildDelay = 1
+  Ammunition
+    MaxAmmo = 999
+trap_trigger_slimeball_my
+  Include = trap_trigger_slimeball
+  Owner = SinglePlayer
+  PlacementRestriction
+    Slot = False|                        T      _      _      _   
+  Ammunition
+    MaxAmmo = 999
+    RestockSource = Append
+  Gimmick
+    Cost
+      CostEntries
+      Time = 1
+    RebuildDelay = 1
+  InternalCurrencyStorage
+    Storages = Append
+  AutoRestockInternalStorage
+    ToRestock = Append
+  RebuildWhenKilled
+    NormalRebuildDelay = 1
 type_spawner_pri
   Include = type_base
 world_my
