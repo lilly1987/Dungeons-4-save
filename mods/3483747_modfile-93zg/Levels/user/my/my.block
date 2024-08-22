@@ -583,10 +583,13 @@ s_my_create
   Include = empty_script
   ScriptContainer
     Actions
+      Item = SetEntityValue
+        Source = Entity||rooms/room_guardroom2|
+        Destination = Entity||loc|
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint_m|
+        Location = PosHead||loc|0 0 0
         Templates
           Item = unit_priestess_gold
       Item = Wait
@@ -594,7 +597,7 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint_m|
+        Location = PosHead||loc|0 0 0
         Templates
           Item = unit_priestess_gold
       Item = Wait
@@ -602,7 +605,7 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint_m|
+        Location = PosHead||loc|0 0 0
         Templates
           Item = unit_priestess_gold
       Item = Wait
@@ -610,21 +613,11 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint_m|
+        Location = PosHead||loc|0 0 0
         Templates
           Item = unit_priestess_gold
       Item = Wait
         Duration = Float||time_m|0
-      Item = SpawnTemplateFromList
-        Amount = Int||v_cnt|5
-        Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint_m|
-        Templates
-          Item = unit_priestess_gold
-        IsCommentedOut = True
-      Item = Wait
-        Duration = Float||time_m|0
-        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
@@ -679,6 +672,16 @@ s_my_create
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
         Location = Entity||waypoints/waypoint_m|
+        Templates
+          Item = unit_priestess_gold
+        IsCommentedOut = True
+      Item = Wait
+        Duration = Float||time_m|0
+        IsCommentedOut = True
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = PosHead||loc|0 0 0
         Templates
           Item = hero_priestess_common
       Item = Wait
@@ -686,7 +689,7 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint_m|
+        Location = PosHead||loc|0 0 0
         Templates
           Item = hero_priestess_elite
       Item = Wait
@@ -694,7 +697,7 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint_m|
+        Location = PosHead||loc|0 0 0
         Templates
           Item = hero_priestess_gold
       Item = Wait
@@ -702,7 +705,7 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint_m|
+        Location = PosHead||loc|0 0 0
         Templates
           Item = plot_protagonist_evil
       Item = Wait
@@ -710,11 +713,33 @@ s_my_create
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||waypoints/waypoint_m|
+        Location = PosHead||loc|0 0 0
+        Templates
+          Item = plot_protagonist_evil
+        SpawnedEntitiesVariable = EntityList||tmp|
+        IsCommentedOut = True
+      Item = Wait
+        Duration = Float||time_m|0
+        IsCommentedOut = True
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = PosHead||loc|0 0 0
         Templates
           Item = unit_pitfiend_my
       Item = Wait
         Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = PosHead||loc|0 0 0
+        Templates
+          Item = unit_pitfiend_my
+        SpawnedEntitiesVariable = EntityList||tmp|
+        IsCommentedOut = True
+      Item = Wait
+        Duration = Float||time_m|0
+        IsCommentedOut = True
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
@@ -725,6 +750,42 @@ s_my_create
       Item = Wait
         Duration = Float||v_t|1
         IsCommentedOut = True
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = PosHead||loc|0 0 0
+        Templates
+          Item = unit_vampire_queen
+        SpawnedEntitiesVariable = EntityList||tmp|
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = PosHead||loc|0 0 0
+        Templates
+          Item = unit_vampire_queen
+        SpawnedEntitiesVariable = EntityList||tmp|
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = PosHead||loc|0 0 0
+        Templates
+          Item = unit_succubus
+        SpawnedEntitiesVariable = EntityList||tmp|
+      Item = Wait
+        Duration = Float||time_m|0
+      Item = SpawnTemplateFromList
+        Amount = Int||v_cnt|5
+        Owner = SinglePlayer
+        Location = PosHead||loc|0 0 0
+        Templates
+          Item = unit_succubus
+        SpawnedEntitiesVariable = EntityList||tmp|
+      Item = Wait
+        Duration = Float||time_m|0
     Triggers
       Item = OnceAfter
         StartDelay = Float||time_f|3
@@ -733,6 +794,7 @@ s_my_create
       Item = EntityList|tmp||
       Item = Entity|v_ent||
       Item = Int|v_cnt||10
+      Item = Entity|loc||
 s_my_create_o
   Include = empty_script
   ScriptContainer
@@ -740,10 +802,13 @@ s_my_create_o
       Item = OnceAfter
         StartDelay = Float||time_f|3
     Actions
+      Item = SetEntityValue
+        Source = Entity||waypoints/waypoint_b|
+        Destination = Entity||loc|
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||entrances/entrance_outside|
+        Location = PosHead||loc|0 0 0
         Templates
           Item = unit_vampire_queen
         SpawnedEntitiesVariable = EntityList||tmp|
@@ -752,7 +817,7 @@ s_my_create_o
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||entrances/entrance_outside|
+        Location = PosHead||loc|0 0 0
         Templates
           Item = unit_vampire_queen
         SpawnedEntitiesVariable = EntityList||tmp|
@@ -761,7 +826,7 @@ s_my_create_o
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||entrances/entrance_outside|
+        Location = PosHead||loc|0 0 0
         Templates
           Item = unit_succubus
         SpawnedEntitiesVariable = EntityList||tmp|
@@ -770,7 +835,7 @@ s_my_create_o
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||entrances/entrance_outside|
+        Location = PosHead||loc|0 0 0
         Templates
           Item = unit_succubus
         SpawnedEntitiesVariable = EntityList||tmp|
@@ -779,7 +844,7 @@ s_my_create_o
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||entrances/entrance_outside|
+        Location = PosHead||loc|0 0 0
         Templates
           Item = plot_protagonist_evil
         SpawnedEntitiesVariable = EntityList||tmp|
@@ -788,7 +853,7 @@ s_my_create_o
       Item = SpawnTemplateFromList
         Amount = Int||v_cnt|5
         Owner = SinglePlayer
-        Location = Entity||entrances/entrance_outside|
+        Location = PosHead||loc|0 0 0
         Templates
           Item = unit_pitfiend_my
         SpawnedEntitiesVariable = EntityList||tmp|
@@ -798,11 +863,14 @@ s_my_create_o
         SelectionGroup = EntityList||tmp|
         Order = MoveAttackOrder
           Target = Entity||spawners/spawner_eddyn_patrol_sandbox_my_builder|
+        IsCommentedOut = True
+    Enabled = False
   ScriptVariableContainer
     Variables
       Item = EntityList|tmp||
       Item = Entity|v_ent||
       Item = Int|v_cnt||10
+      Item = Entity|loc||
 s_my_create_pri
   Include = empty_script
   ScriptContainer
@@ -810,212 +878,93 @@ s_my_create_pri
       Item = OnceAfter
         StartDelay = Float||time_f|3
     Actions
-      Item = ForLoopAction
-        LoopCounts = Int|||5
-        Actions
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_e|
-            Templates
-              Item = hero_priestess_common2
-            SpawnedEntitiesVariable = EntityList||tmp|
-          Item = Wait
-            Duration = Float||time_m|0
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_e|
-            Templates
-              Item = hero_priestess_elite2
-            SpawnedEntitiesVariable = EntityList||tmp|
-          Item = Wait
-            Duration = Float||time_m|0
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_e|
-            Templates
-              Item = hero_priestess_gold2
-            SpawnedEntitiesVariable = EntityList||tmp|
-          Item = Wait
-            Duration = Float||time_m|0
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_m|
-            Templates
-              Item = hero_priestess_common3
-            SpawnedEntitiesVariable = EntityList||tmp|
-            IsCommentedOut = True
-          Item = Wait
-            Duration = Float||time_m|0
-            IsCommentedOut = True
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_m|
-            Templates
-              Item = hero_priestess_elite3
-            SpawnedEntitiesVariable = EntityList||tmp|
-            IsCommentedOut = True
-          Item = Wait
-            Duration = Float||time_m|0
-            IsCommentedOut = True
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_e|
-            Templates
-              Item = hero_priestess_gold3
-            SpawnedEntitiesVariable = EntityList||tmp|
-          Item = Wait
-            Duration = Float||time_m|0
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_e|
-            Templates
-              Item = plot_protagonist_evil2
-            SpawnedEntitiesVariable = EntityList||tmp|
-          Item = Wait
-            Duration = Float||time_m|0
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_e|
-            Templates
-              Item = hero_priestess_elite3
-            SpawnedEntitiesVariable = EntityList||tmp|
-          Item = Wait
-            Duration = Float||time_m|0
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_e|
-            Templates
-              Item = plot_protagonist_evil4
-            SpawnedEntitiesVariable = EntityList||tmp|
-          Item = Wait
-            Duration = Float||time_m|0
-      Item = ForEach
-        LoopVariable = Entity||v_ent|
-        Items = EntityList||tmp|
-        Actions
-          Item = SetUnitHealth
-            Unit = Entity||v_ent|
-            Value = Float|||0.01
+      Item = SetEntityValue
+        Source = Entity||waypoints/waypoint_e2|
+        Destination = Entity||pri_loc|
+      Item = SpawnTemplateFromList
+        Amount = Int||pri_cnt|0
+        Owner = AIPlayer5
+        Location = PosHead||pri_loc|0 0 0
+        Templates
+          Item = plot_protagonist_evil4
+        SpawnedEntitiesVariable = EntityList||prt_ents|
+      Item = SpawnTemplateFromList
+        Amount = Int||pri_cnt|0
+        Owner = AIPlayer5
+        Location = PosHead||pri_loc|0 0 0
+        Templates
+          Item = plot_protagonist_evil3
+        SpawnedEntitiesVariable = EntityList||prt_ents|
+      Item = SpawnTemplateFromList
+        Amount = Int||pri_cnt|0
+        Owner = AIPlayer5
+        Location = PosHead||pri_loc|0 0 0
+        Templates
+          Item = plot_protagonist_evil2
+        SpawnedEntitiesVariable = EntityList||prt_ents|
+      Item = Comment
+        IsCommentedOut = True
+        Comment = ""
+      Item = SpawnTemplateFromList
+        Amount = Int||pri_cnt|0
+        Owner = AIPlayer5
+        Location = PosHead||pri_loc|0 0 0
+        Templates
+          Item = hero_priestess_common2
+        SpawnedEntitiesVariable = EntityList||prt_ents|
+      Item = SpawnTemplateFromList
+        Amount = Int||pri_cnt|0
+        Owner = AIPlayer5
+        Location = PosHead||pri_loc|0 0 0
+        Templates
+          Item = hero_priestess_elite2
+        SpawnedEntitiesVariable = EntityList||prt_ents|
+      Item = SpawnTemplateFromList
+        Amount = Int||pri_cnt|0
+        Owner = AIPlayer5
+        Location = PosHead||pri_loc|0 0 0
+        Templates
+          Item = hero_priestess_gold2
+        SpawnedEntitiesVariable = EntityList||prt_ents|
+      Item = Comment
+        IsCommentedOut = True
+        Comment = ""
+      Item = SpawnTemplateFromList
+        Amount = Int||pri_cnt|0
+        Owner = AIPlayer5
+        Location = PosHead||pri_loc|0 0 0
+        Templates
+          Item = hero_priestess_gold3
+        SpawnedEntitiesVariable = EntityList||prt_ents|
+      Item = Comment
+        IsCommentedOut = True
+        Comment = ""
       Item = Wait
-        Duration = Float|||3
-      Item = ForEach
-        LoopVariable = Entity||v_ent|
-        Items = EntityList||tmp|
-        Actions
-          Item = KillUnit
-            Unit = Entity||v_ent|
+        Duration = Float||pri_kill|0
+      Item = KillSelectionGroupMembers
+        DamageOwner = AIPlayer5
+        Units = EntityList||prt_ents|
       Item = ClearEntityList
-        EntityList = EntityList||tmp|
-      Item = ForLoopAction
-        LoopCounts = Int|||5
-        Actions
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_e2|
-            Templates
-              Item = hero_priestess_common2
-            SpawnedEntitiesVariable = EntityList||tmp|
-          Item = Wait
-            Duration = Float||time_m|0
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_e2|
-            Templates
-              Item = hero_priestess_elite2
-            SpawnedEntitiesVariable = EntityList||tmp|
-          Item = Wait
-            Duration = Float||time_m|0
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_e2|
-            Templates
-              Item = hero_priestess_gold2
-            SpawnedEntitiesVariable = EntityList||tmp|
-          Item = Wait
-            Duration = Float||time_m|0
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_m|
-            Templates
-              Item = hero_priestess_common3
-            SpawnedEntitiesVariable = EntityList||tmp|
-            IsCommentedOut = True
-          Item = Wait
-            Duration = Float||time_m|0
-            IsCommentedOut = True
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_m|
-            Templates
-              Item = hero_priestess_elite3
-            SpawnedEntitiesVariable = EntityList||tmp|
-            IsCommentedOut = True
-          Item = Wait
-            Duration = Float||time_m|0
-            IsCommentedOut = True
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_e2|
-            Templates
-              Item = hero_priestess_gold3
-            SpawnedEntitiesVariable = EntityList||tmp|
-          Item = Wait
-            Duration = Float||time_m|0
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_e2|
-            Templates
-              Item = plot_protagonist_evil2
-            SpawnedEntitiesVariable = EntityList||tmp|
-          Item = Wait
-            Duration = Float||time_m|0
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_e2|
-            Templates
-              Item = hero_priestess_elite3
-            SpawnedEntitiesVariable = EntityList||tmp|
-          Item = Wait
-            Duration = Float||time_m|0
-          Item = SpawnTemplateFromList
-            Amount = Int||v_cnt|5
-            Owner = AIPlayer5
-            Location = Entity||waypoints/waypoint_e2|
-            Templates
-              Item = plot_protagonist_evil4
-            SpawnedEntitiesVariable = EntityList||tmp|
-          Item = Wait
-            Duration = Float||time_m|0
-      Item = Wait
-        Duration = Float|||3
-      Item = ForEach
-        LoopVariable = Entity||v_ent|
-        Items = EntityList||tmp|
-        Actions
-          Item = KillUnit
-            Unit = Entity||v_ent|
+        EntityList = EntityList||prt_ents|
+    Enabled = True
   ScriptVariableContainer
     Variables
-      Item = Int|v_cnt||2
-      Item = EntityList|tmp||
-      Item = Entity|v_ent||
+s_my_create_pri kill
+  Include = empty_script
+  ScriptContainer
+    Triggers
+    Actions
+      Item = Wait
+        Duration = Float||pri_kill|0
+      Item = KillSelectionGroupMembers
+        Units = EntityList||prt_ents|
+        DamageOwner = AIPlayer5
+      Item = ClearEntityList
+        EntityList = EntityList||prt_ents|
+    AfterPlay = Disable
+    Enabled = False
+  ScriptVariableContainer
+    Variables
 s_my_dig
   Include = empty_script
   ScriptContainer
@@ -1028,20 +977,20 @@ s_my_dig
         End = Entity||tile_area_marker|
         IsCommentedOut = True
       Item = DigRoom
-        IsCommentedOut = True
-      Item = DigSingleTile
-        IsCommentedOut = True
+        RoomTemplate = room_treasury
+        StartTile = Entity||rooms/room_treasury1|
+      Item = Wait
+        Duration = Float|||3
       Item = MarkTileForDigging
         Player = SinglePlayer
         Tile = Entity||tile_area_marker|
+      Item = Wait
+        Duration = Float|||3
       Item = DigTileAction
         TileArea = Entity||tile_area_marker|
-        IsCommentedOut = True
-    Enabled = False
+    Enabled = True
   ScriptVariableContainer
     Variables
-      Item = EntityList|tmps||
-      Item = Int|tmp||0
 s_my_evil
   Include = empty_script
   ScriptContainer
@@ -1432,6 +1381,9 @@ type_spawner_pri
   Include = type_base
 unit_pitfiend_my
   Include = unit_pitfiend
+  ConsumeResource
+    Cost
+      CostEntries
 world_my
   Include = world
   SceneDescription
@@ -1514,11 +1466,16 @@ world_my
       Item = Float|time_up||300
       Item = Float|time_every||60
       Item = Float|time_f||3
-      Item = Float|time_m||0.125
+      Item = Float|time_m||0.25
       Item = Int|un||1
       Item = Formula|f||
       Item = EntityTemplate|t||
       Item = String|s||
+      Item = Float|pri_kill||3
+      Item = Entity|pri_loc||
+      Item = Int|pri_cnt||10
+      Item = EntityTemplate|pri_tpl||
+      Item = EntityList|prt_ents||
   EvilDeedManager
     TypeLimits
       Item
