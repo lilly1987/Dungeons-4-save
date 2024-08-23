@@ -1141,7 +1141,7 @@ s_my_spawn
   ScriptContainer
     Triggers
       Item = PeriodicTrigger
-        Duration = Float||time_every|0
+        Duration = Float||time_every_s|0
       Item = OnceAfter
         StartDelay = Float||time_f|3
     AfterPlay = Nothing
@@ -1502,9 +1502,10 @@ world_my
       Item = String|s||
       Item = Float|pri_kill||3
       Item = Entity|pri_loc||
-      Item = Int|pri_cnt||10
+      Item = Int|pri_cnt||5
       Item = EntityTemplate|pri_tpl||
       Item = EntityList|prt_ents||
+      Item = Float|time_every_s||60
   EvilDeedManager
     TypeLimits
       Item
