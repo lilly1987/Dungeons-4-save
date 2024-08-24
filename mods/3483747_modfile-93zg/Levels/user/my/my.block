@@ -292,6 +292,9 @@ player_playable_my
       Item = res_vortex.stage_4
       Item = res_vortex.stage_5
       Item = res_vortex.stage_6
+      Item = res_western.stage_1
+      Item = res_western.stage_2
+      Item = res_western.stage_3
   BatteryManager
     GlobalCapacity = 100
     GlobalCurrent = 100
@@ -1490,8 +1493,8 @@ world_my
       Item = EntityList|spawn_all||
       Item = EntityList|spawn_t||
       Item = EntityList|spawn_r||
-      Item = Int|spawn_cnt||3
-      Item = Int|spawn_max||10
+      Item = Int|spawn_cnt||1
+      Item = Int|spawn_max||30
       Item = Float|time_up||300
       Item = Float|time_every||60
       Item = Float|time_f||3
